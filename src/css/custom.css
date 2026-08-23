@@ -16,16 +16,38 @@
   --ifm-color-primary-lightest: #bec5fb;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Infima's hero--primary otherwise falls back to a low-contrast text color
+     against a bright accent background -- force white in both modes. */
+  --ifm-hero-text-color: #fff;
+  --clarity-hero-bg: linear-gradient(135deg, #5b6cf5, #7c8af7);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #6e7ef7;
-  --ifm-color-primary-dark: #4c5ef4;
-  --ifm-color-primary-darker: #3a4ef2;
-  --ifm-color-primary-darkest: #1626c4;
-  --ifm-color-primary-light: #909dfa;
-  --ifm-color-primary-lighter: #a2adfb;
-  --ifm-color-primary-lightest: #d1d6fd;
+  --ifm-color-primary: #909dfa;
+  --ifm-color-primary-dark: #7482f8;
+  --ifm-color-primary-darker: #6673f7;
+  --ifm-color-primary-darkest: #3a4ef2;
+  --ifm-color-primary-light: #acb6fc;
+  --ifm-color-primary-lighter: #bac2fc;
+  --ifm-color-primary-lightest: #e1e4fe;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* The light-mode primary reused as a hero background reads as a pale,
+     washed-out block against Infima's near-black dark page -- a deeper,
+     richer indigo band feels intentional instead. Link/button colors above
+     stay light (readable against dark surfaces); this is background-only. */
+  --clarity-hero-bg: linear-gradient(135deg, #2b3480, #423a9e);
+}
+
+/* Infima derives .hero--primary's text color from --ifm-color-primary's
+   computed contrast (light primary -> black text), which no longer matches
+   now that the background above is a separate, deliberately deeper gradient
+   -- own the text color outright instead of fighting that computation. */
+.hero--primary {
+  background: var(--clarity-hero-bg);
+}
+
+.hero--primary .hero__title,
+.hero--primary .hero__subtitle {
+  color: #fff;
 }

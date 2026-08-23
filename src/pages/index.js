@@ -3,24 +3,29 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import {Zap, Bot, Globe, Layers, ListChecks} from 'lucide-react';
 import styles from './index.module.css';
 
 const FEATURES = [
   {
-    title: 'Boards, your way',
-    description: 'Kanban lists and cards, with projects, milestones, tags, and custom fields for the structure a plain to-do list doesn’t give you.',
-  },
-  {
-    title: 'Perspectives & CQL',
-    description: 'Saved, filtered, cross-board views powered by a real query language — "everything due this week", "all my P1s", built and reused in seconds.',
-  },
-  {
+    icon: Zap,
     title: 'Automate the busywork',
     description: 'Templates, automations, and column rules handle the repetitive parts so you don’t have to.',
   },
   {
-    title: 'Two-way sync',
-    description: 'Jira, Google Calendar, and Slack stay in sync with your boards — plus a command-line tool so AI assistants and scripts can read and write your tasks directly.',
+    icon: Bot,
+    title: 'Connect your AI',
+    description: 'A built-in command-line tool lets AI assistants (like Claude Code) and scripts read and manage your tasks directly — through the same database the app uses, so changes show up instantly.',
+  },
+  {
+    icon: Globe,
+    title: 'Clarity, everywhere',
+    description: 'Desktop and Android today, with iOS and web on the way — your boards follow you, wherever you work.',
+  },
+  {
+    icon: Layers,
+    title: 'Built for power users',
+    description: 'Tasks, habits, packing lists, projects, and so much more — Clarity scales past a simple to-do list without getting in your way.',
   },
 ];
 
@@ -46,12 +51,17 @@ function HomepageHeader() {
   );
 }
 
-function Feature({title, description}) {
+function Feature({icon: Icon, title, description}) {
   return (
-    <div className={clsx('col col--3')}>
-      <div className="padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--6', styles.featureCol)}>
+      <div className={styles.featureCard}>
+        <div className={styles.featureIcon}>
+          <Icon size={28} strokeWidth={1.75} />
+        </div>
+        <div>
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );
@@ -81,12 +91,13 @@ export default function Home() {
       <main>
         <section className="container margin-vert--lg">
           <div className="row">
-            <div className="col col--8 col--offset-2 text--center">
+            <div className={clsx('col col--8 col--offset-2 text--center', styles.introRow)}>
+              <ListChecks className={styles.introIcon} size={32} strokeWidth={1.5} />
               <p>
                 <strong>Clarity</strong> is a desktop task manager built around Kanban boards, with extra tools for
                 people who want more structure than a plain to-do list: saved cross-board views, projects and
                 milestones, a query language, automations, reminders, and two-way sync with Jira, Google Calendar,
-                and Slack. You can also let an AI assistant manage your tasks through the built-in command-line tool.
+                and Slack.
               </p>
             </div>
           </div>

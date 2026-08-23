@@ -1,0 +1,38 @@
+.headerIcon {
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.planCard {
+  height: 100%;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.planIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.75rem;
+  border-radius: 999px;
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .planIcon {
+  background: rgba(144, 157, 250, 0.16);
+  color: var(--ifm-color-primary-light);
+}
+
+.planPrice {
+  margin: 0.5rem 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.planPeriod {
+  margin: 0;
+  color: var(--ifm-color-content-secondary);
+}

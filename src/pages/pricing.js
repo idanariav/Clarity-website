@@ -1,35 +1,39 @@
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import {Calendar, CalendarDays, Infinity as InfinityIcon, Sparkles} from 'lucide-react';
+import styles from './pricing.module.css';
 
 const PLANS = [
   {
+    icon: Calendar,
     name: 'Monthly',
     price: '$2',
     period: '/ month',
   },
   {
+    icon: CalendarDays,
     name: 'Yearly',
     price: '$16',
     period: '/ year',
   },
   {
+    icon: InfinityIcon,
     name: 'Lifetime',
     price: '$30',
     period: 'one-time',
   },
 ];
 
-function Plan({name, price, period}) {
+function Plan({icon: Icon, name, price, period}) {
   return (
     <div className="col col--4 margin-bottom--lg">
-      <div className="card">
-        <div className="card__header">
-          <Heading as="h3">{name}</Heading>
+      <div className={`card ${styles.planCard}`}>
+        <div className={styles.planIcon}>
+          <Icon size={22} strokeWidth={1.75} />
         </div>
-        <div className="card__body text--center">
-          <p style={{fontSize: '2rem', margin: 0}}>{price}</p>
-          <p>{period}</p>
-        </div>
+        <Heading as="h3">{name}</Heading>
+        <p className={styles.planPrice}>{price}</p>
+        <p className={styles.planPeriod}>{period}</p>
       </div>
     </div>
   );
@@ -41,6 +45,7 @@ export default function Pricing() {
       <main className="container margin-vert--lg">
         <div className="row">
           <div className="col col--8 col--offset-2 text--center margin-bottom--lg">
+            <Sparkles className={styles.headerIcon} size={32} strokeWidth={1.5} />
             <Heading as="h1">Pricing</Heading>
             <p>
               Clarity is in beta. Everyone who signs up during the beta window keeps these rates{' '}
