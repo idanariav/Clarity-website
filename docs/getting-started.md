@@ -13,7 +13,7 @@ Clarity opens on a **board** — a Kanban layout of lists (columns) holding task
 The left sidebar is your navigation hub:
 
 - **Boards** — your boards, in order. Click to switch, drag to reorder, double-click the name to rename, click **+** to add one. Press **1–9** to jump to the 1st–9th board.
-- **Perspectives** — saved cross-board filtered views (if the feature is on). Click **+** to create one; click a perspective to open it. See [Perspectives & CQL](perspectives-and-cql.md).
+- **Views** — saved cross-board filtered views (if the feature is on). Click **+** to create one; click a view to open it. See [Views & CQL](views-and-cql.md).
 - **Integration status** — small indicators for Jira / Google Calendar / Slack showing connection and last-sync state. Click to open that integration's manager. See [Integrations](integrations.md).
 - **Theme control** — toggle light/dark (when using the Default theme). Full appearance options live in Settings.
 
@@ -24,8 +24,8 @@ Only one main view is active at a time:
 | View | What it shows | How to open |
 | --- | --- | --- |
 | **Board** | The current board's lists and cards (the default) | Click a board, or press **1–9** |
-| **Perspective** | A saved filtered, grouped, sorted view across all boards | Click a perspective in the sidebar |
-| **Overview** | A dashboard combining several perspectives side by side | Open it from the sidebar/perspectives area |
+| **Saved View** | A saved filtered, grouped, sorted view across all boards | Click a view in the sidebar |
+| **Overview** | A dashboard combining several views side by side | Open it from the sidebar/views area |
 | **Planner** | The Day Planner — time-block tasks against your calendar | Open the planner from the sidebar |
 | **Settings** | Feature switches, appearance, shortcuts, integrations | Open Settings from the sidebar |
 

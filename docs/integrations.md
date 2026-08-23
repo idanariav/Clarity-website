@@ -71,10 +71,10 @@ Clarity ships a **command-line tool** so AI assistants (e.g. Claude Code) and sc
 **What it can do**
 
 *Read*
-- **`workspace`** — discover your boards, lists, projects, tags, custom fields, milestones, perspectives, and the CQL guide. (Run this first to learn your names.)
-- **`task query`** — find tasks with a [CQL](perspectives-and-cql.md#cql--clarity-query-language) filter.
+- **`workspace`** — discover your boards, lists, projects, tags, custom fields, milestones, views, and the CQL guide. (Run this first to learn your names.)
+- **`task query`** — find tasks with a [CQL](views-and-cql#cql--clarity-query-language) filter.
 - **`task get`** — fetch one task in full.
-- **`perspective run`** — run one of your saved perspectives.
+- **`view run`** — run one of your saved views.
 
 *Write*
 - **`task create`**, **`task update`**, **`task complete`**, **`task delete`**

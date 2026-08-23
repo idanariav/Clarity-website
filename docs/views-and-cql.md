@@ -2,30 +2,30 @@
 sidebar_position: 4
 ---
 
-# Perspectives & CQL
+# Views & CQL
 
-## Perspectives (saved filtered views)
+## Views (saved filtered views)
 
-A **perspective** is a saved, named view that pulls tasks from **all** boards, filters them, then groups and sorts them however you like. It lives in the sidebar and is great for cutting across boards — "everything due this week", "all my P1s", "deep-work tasks", etc.
+A **view** is a saved, named view that pulls tasks from **all** boards, filters them, then groups and sorts them however you like. It lives in the sidebar and is great for cutting across boards — "everything due this week", "all my P1s", "deep-work tasks", etc.
 
-### Creating a perspective
+### Creating a view
 
-1. Click **+** in the sidebar's Perspectives section.
+1. Click **+** in the sidebar's Views section.
 2. Give it a **name**, and optionally an **icon** and **color** for the sidebar.
 3. Define the **filter** — either with the visual **rule builder** (pick conditions, combine with all/any) or by writing **CQL** directly (see below). Both produce the same result.
 4. Choose **Group by**: `None`, `Board`, `Project`, `Milestone`, `List` (column), `Priority`, or `Deadline bucket`.
 5. Choose **Sort by**: `Deadline`, `Do date`, `Start date`, `Priority`, `Created`, or `Manual`.
-6. Save. The perspective appears in the sidebar; click it to view.
+6. Save. The view appears in the sidebar; click it to view.
 
-When grouping is **None** and sorting is **Manual**, you can drag to arrange tasks by hand. Edit or delete a perspective from its row menu.
+When grouping is **None** and sorting is **Manual**, you can drag to arrange tasks by hand. Edit or delete a view from its row menu.
 
 ### The Overview dashboard
 
-The **Overview** shows several perspectives **side by side** as columns — a single dashboard of your most important views. Add a perspective to the Overview, drag the columns to reorder, and click a column to jump into that full perspective. Use it as your daily "command center".
+The **Overview** shows several views **side by side** as columns — a single dashboard of your most important views. Add a view to the Overview, drag the columns to reorder, and click a column to jump into that full view. Use it as your daily "command center".
 
 ## CQL — Clarity Query Language
 
-CQL is the text syntax behind perspective filters and search. Combine conditions with **`and`** / **`or`** and group with **parentheses**. `and` binds tighter than `or`. **Quote** any name that contains spaces or a reserved keyword (e.g. `tag:"deep work"`).
+CQL is the text syntax behind view filters and search. Combine conditions with **`and`** / **`or`** and group with **parentheses**. `and` binds tighter than `or`. **Quote** any name that contains spaces or a reserved keyword (e.g. `tag:"deep work"`).
 
 ### Conditions
 
@@ -121,4 +121,4 @@ This reads: priority P1 or P2 **and** (overdue **or** tagged "deep work").
 | This week on the Work board | `board:"Work" and do within 7 days` |
 | Stuck items (no project, overdue) | `no project and deadline is overdue` |
 
-> CQL is also the filter language for the AI assistant and for bulk updates — see [Integrations → AI assistant (CLI)](integrations.md#ai-assistant-cli).
+> CQL is also the filter language for the AI assistant and for bulk updates — see [Integrations → AI assistant (CLI)](integrations#ai-assistant-cli).

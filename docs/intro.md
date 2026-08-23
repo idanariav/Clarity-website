@@ -15,7 +15,7 @@ This guide explains what each feature does, how to use it, when it shows up, and
 | --- | --- |
 | [Getting started](getting-started) | First look, the sidebar, the five views, keyboard help |
 | [Boards & tasks](boards-and-tasks) | Boards, lists, cards, Quick Add, the task editor, bulk actions, card colors |
-| [Perspectives & CQL](perspectives-and-cql) | Saved filtered views, the Overview dashboard, the full query-language reference |
+| [Views & CQL](views-and-cql) | Saved filtered views, the Overview dashboard, the full query-language reference |
 | [Integrations](integrations) | Jira, Google Calendar, Slack, and the AI assistant CLI |
 | [Settings & features](settings-and-features) | Feature on/off switches, themes, shortcuts, reminders, recurrence, templates, custom fields, automations, column rules, the day planner |
 
@@ -24,7 +24,7 @@ This guide explains what each feature does, how to use it, when it shows up, and
 **Organize your work**
 - Boards, lists, cards → [Boards & tasks](boards-and-tasks)
 - Tags, projects, milestones, custom fields → [Boards & tasks](boards-and-tasks) · [Settings & features](settings-and-features)
-- Perspectives (saved filtered views) & the Overview dashboard → [Perspectives & CQL](perspectives-and-cql)
+- Views (saved filtered views) & the Overview dashboard → [Views & CQL](views-and-cql)
 
 **Plan your time**
 - Dates, deadlines, durations, reminders, recurring tasks → [Boards & tasks](boards-and-tasks) · [Settings & features](settings-and-features)

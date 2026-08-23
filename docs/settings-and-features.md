@@ -14,7 +14,7 @@ Most non-core features can be switched off to declutter the UI. Core features (b
 
 | Feature | What it controls |
 | --- | --- |
-| **Perspectives & Overview** | Saved cross-board filtered views and the multi-perspective dashboard. |
+| **Views & Overview** | Saved cross-board filtered views and the multi-view dashboard. |
 | **Day Planner** | Time-block your day: drag tasks onto an agenda alongside calendar events. |
 | **Quick Add** | The keyboard-triggered popup to capture a task with date, priority, labels, and destination. |
 | **Projects** | Group tasks into projects with sequential or parallel ordering. |
@@ -85,7 +85,7 @@ Each below lists *what it does · how to use it · when it shows up · a use cas
 ### Flexible tasks
 
 - **What:** an opt-in mode for tasks whose do date you don't fully control — "nice to have, not a must." A flexible task never shows as overdue in Today/Overview or on the board; instead, if it's still incomplete once its do date has passed, it's either **rolled** to today (repeating until you complete it) or **expired** (deleted). A real deadline you also set on the task is unaffected and still signals overdue normally.
-- **How:** open a task → **Flexible** → choose *Off*, *Roll to tomorrow if missed*, or *Expire if missed*. Also filterable in CQL/perspectives (`flexibility is roll`, `flexibility is set`, …).
+- **How:** open a task → **Flexible** → choose *Off*, *Roll to tomorrow if missed*, or *Expire if missed*. Also filterable in CQL/views (`flexibility is roll`, `flexibility is set`, …).
 - **When:** checked whenever the app is open, roughly once a minute — there's no fixed midnight job, so the rollover/expiry lands the next time the app polls after the day changes.
 - **Use case:** "donate blood" — something you want to do but can't schedule precisely (no blood drive yet, no free slot) — set to *Roll* so it keeps surfacing as today's work without ever guilt-tripping you as overdue.
 
@@ -128,5 +128,5 @@ Each below lists *what it does · how to use it · when it shows up · a use cas
 
 - **What:** group a board's tasks into projects, with an ordering discipline.
 - **How:** create projects (each has a color and icon). Assign tasks via the editor, Quick Add `@project`, or the bulk bar. Choose **sequential** (tasks unlock one after another) or **parallel** (all available at once). Switch the project view between **List** and **Timeline (Gantt)**; on the timeline you can drag milestone/task dates to reschedule.
-- **When:** projects appear as a filter in the board header and as a grouping in perspectives.
+- **When:** projects appear as a filter in the board header and as a grouping in views.
 - **Use case:** run a multi-step initiative where some work must happen in order, and see it on a timeline.
