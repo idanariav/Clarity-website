@@ -1,0 +1,57 @@
+.headerIcon {
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.downloadCard {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.platformIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 0.75rem;
+  border-radius: 999px;
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .platformIcon {
+  background: rgba(144, 157, 250, 0.16);
+  color: var(--ifm-color-primary-light);
+}
+
+.cardNote {
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.cardSub {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.comingSoonHeading {
+  font-size: 1.1rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.comingSoonRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.comingSoonItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ifm-color-content-secondary);
+}

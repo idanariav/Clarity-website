@@ -70,6 +70,7 @@ const config = {
           {to: '/pricing', label: 'Pricing', position: 'left'},
           {to: '/refund-policy', label: 'Refund Policy', position: 'left'},
           {to: '/terms', label: 'Terms', position: 'left'},
+          {to: '/download', label: 'Download', position: 'right'},
         ],
       },
       footer: {
@@ -78,6 +79,7 @@ const config = {
           {
             title: 'Product',
             items: [
+              {label: 'Download', to: '/download'},
               {label: 'Docs', to: '/docs'},
               {label: 'Pricing', to: '/pricing'},
             ],
