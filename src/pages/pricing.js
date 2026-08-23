@@ -1,7 +1,17 @@
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import {Calendar, CalendarDays, Infinity as InfinityIcon, Sparkles} from 'lucide-react';
+import Link from '@docusaurus/Link';
+import {Calendar, CalendarDays, Check, Infinity as InfinityIcon, Sparkles} from 'lucide-react';
 import styles from './pricing.module.css';
+
+const FEATURES = [
+  'Unlimited boards, lists & cards',
+  'Saved views & the full query language (CQL)',
+  'Automations, column rules & templates',
+  'Two-way sync with Jira, Google Calendar & Slack',
+  'AI assistant integration via the CLI',
+  'Reminders, recurring tasks & the day planner',
+];
 
 const PLANS = [
   {
@@ -34,6 +44,18 @@ function Plan({icon: Icon, name, price, period}) {
         <Heading as="h3">{name}</Heading>
         <p className={styles.planPrice}>{price}</p>
         <p className={styles.planPeriod}>{period}</p>
+        <ul className={styles.featureList}>
+          {FEATURES.map((feature) => (
+            <li key={feature}>
+              <Check size={16} strokeWidth={2} className={styles.featureCheck} />
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+        <p className={styles.trialNote}>Includes a 30-day free trial</p>
+        <Link className="button button--primary button--block" to="/download">
+          Get started
+        </Link>
       </div>
     </div>
   );

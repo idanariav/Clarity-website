@@ -4,6 +4,8 @@
 }
 
 .planCard {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 2rem 1.5rem;
   text-align: center;
@@ -34,5 +36,34 @@
 
 .planPeriod {
   margin: 0;
+  color: var(--ifm-color-content-secondary);
+}
+
+.featureList {
+  flex-grow: 1;
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.featureList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.featureCheck {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: var(--ifm-color-primary);
+}
+
+.trialNote {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--ifm-color-content-secondary);
 }
