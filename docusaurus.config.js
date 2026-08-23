@@ -108,6 +108,15 @@ const config = {
         respectPrefersColorScheme: true,
       },
     }),
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      /** @type {Partial<import("@easyops-cn/docusaurus-search-local").PluginOptions>} */
+      ({
+        hashed: true,
+      }),
+    ],
+  ],
 };
 
 export default config;
