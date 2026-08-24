@@ -28,4 +28,4 @@ once, in this repo's Settings → Pages.
 - `src/pages/index.js` — landing page.
 - `src/pages/pricing.js` — pricing (currently the beta/early-bird rates).
 - `src/pages/download.js` — download page, links out to the `idanariav/Clarity-releases` GitHub releases.
-- `src/pages/terms.md`, `src/pages/refund-policy.md` — legal pages.
+- `src/pages/terms.md`, `src/pages/privacy-policy.md`, `src/pages/refund-policy.md` — legal pages.
