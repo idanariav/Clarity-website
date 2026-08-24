@@ -31,10 +31,11 @@ const PLANS = [
     name: 'Lifetime',
     price: '$30',
     period: 'one-time',
+    caveat: "Local-only — doesn't include cross-device Cloud Sync",
   },
 ];
 
-function Plan({icon: Icon, name, price, period}) {
+function Plan({icon: Icon, name, price, period, caveat}) {
   return (
     <div className="col col--4 margin-bottom--lg">
       <div className={`card ${styles.planCard}`}>
@@ -52,6 +53,7 @@ function Plan({icon: Icon, name, price, period}) {
             </li>
           ))}
         </ul>
+        {caveat && <p className={styles.planCaveat}>{caveat}</p>}
         <p className={styles.trialNote}>Includes a 30-day free trial</p>
         <Link className="button button--primary button--block" to="/download">
           Get started

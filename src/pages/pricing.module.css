@@ -67,3 +67,9 @@
   font-weight: 600;
   color: var(--ifm-color-content-secondary);
 }
+
+.planCaveat {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  color: var(--ifm-color-content-secondary);
+}
