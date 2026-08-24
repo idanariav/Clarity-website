@@ -1,0 +1,6 @@
+Contact: mailto:idan@idanariav.com
+Contact: https://clarity.idanariav.com/security
+Expires: 2027-08-24T23:59:00.000Z
+Preferred-Languages: en
+Canonical: https://clarity.idanariav.com/.well-known/security.txt
+Policy: https://clarity.idanariav.com/security
