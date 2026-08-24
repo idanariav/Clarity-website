@@ -6,9 +6,11 @@ sidebar_position: 4
 
 ## Views (saved filtered views)
 
-A **view** is a saved, named view that pulls tasks from **all** boards, filters them, then groups and sorts them however you like. It lives in the sidebar and is great for cutting across boards — "everything due this week", "all my P1s", "deep-work tasks", etc.
+A **view** is a saved, named filter that pulls tasks from **all** your boards, then groups and sorts them however you like. It lives in the sidebar and is great for cutting across boards — "everything due this week", "all my P1s", "deep-work tasks", etc.
 
 ### Creating a view
+
+![A saved view named \"Critical & overdue\" listing four tasks with their board, priority, and due date](/img/screenshots/saved-view.png)
 
 1. Click **+** in the sidebar's Views section.
 2. Give it a **name**, and optionally an **icon** and **color** for the sidebar.
@@ -17,15 +19,17 @@ A **view** is a saved, named view that pulls tasks from **all** boards, filters 
 5. Choose **Sort by**: `Deadline`, `Do date`, `Start date`, `Priority`, `Created`, or `Manual`.
 6. Save. The view appears in the sidebar; click it to view.
 
-When grouping is **None** and sorting is **Manual**, you can drag to arrange tasks by hand. Edit or delete a view from its row menu.
+When grouping is **None** and sorting is **Manual**, you can drag to arrange tasks by hand. Edit or delete a view from its row menu, or right-click it for the same quick actions plus adding/removing it from the Overview.
 
 ### The Overview dashboard
 
 The **Overview** shows several views **side by side** as columns — a single dashboard of your most important views. Add a view to the Overview, drag the columns to reorder, and click a column to jump into that full view. Use it as your daily "command center".
 
+![The Overview dashboard with two view columns side by side, each showing a Next task and an Up Next list, plus summary counts for critical, overdue, and due-today tasks](/img/screenshots/overview-dashboard.png)
+
 ## CQL — Clarity Query Language
 
-CQL is the text syntax behind view filters and search. Combine conditions with **`and`** / **`or`** and group with **parentheses**. `and` binds tighter than `or`. **Quote** any name that contains spaces or a reserved keyword (e.g. `tag:"deep work"`).
+CQL is the text syntax behind view filters and search — the same thing the visual rule builder produces behind the scenes, just typed directly. Combine conditions with **`and`** / **`or`**, and use **parentheses** to control the order they're evaluated in. `and` binds tighter than `or`, so `a and b or c` is read as `(a and b) or c` — when in doubt, add parentheses to be explicit. **Quote** any name that contains spaces or a reserved keyword (e.g. `tag:"deep work"`).
 
 ### Conditions
 

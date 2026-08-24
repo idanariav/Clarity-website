@@ -21,15 +21,18 @@ A board is one Kanban workspace with its own lists and sorting.
 Lists are the columns within a board (e.g. *To Do / Doing / Done*).
 
 - **Add** a list with **+**, **reorder** by dragging, **rename** inline, and collapse/expand or remove lists.
-- Lists can carry **Column Rules** that highlight them when they get too full — see [Settings & features → Column Rules](settings-and-features.md#column-rules).
+- Lists can carry **Column Rules** that highlight them when they get too full — see [Settings & features → Column Rules](settings-and-features#column-rules).
+- A list can have a **default template** (list menu → **List template**, then pick one) that fills in unset fields on every task you create in it — see [Settings & features → Templates](settings-and-features#templates).
 
 ## Cards (tasks)
 
-A card is a task. Create one by typing in a list's quick-add box, or with the Quick Add popup (**a**). Click a card to open the full editor; drag it to move between lists or reorder.
+A card is a task. Create one by typing in a list's quick-add box, or with the Quick Add popup (**a**). Click a card to open the full editor; drag it to move between lists or reorder; right-click it for quick actions (date, priority, project, milestone, tags, fields) without opening the editor.
 
 ### Quick Add
 
 Press **a** for the Quick Add popup, or type in any list's quick-add box. As you type the **title**, Clarity recognizes shorthand **tokens** and lifts them out of the title:
+
+![The Quick Add popup with the text \"Fix login !1 #incident tomorrow\" typed in, showing the priority, tag, and date tokens highlighted in the title](/img/screenshots/quick-add-popup.png)
 
 | Token | Effect | Example |
 | --- | --- | --- |
@@ -41,15 +44,17 @@ Press **a** for the Quick Add popup, or type in any list's quick-add box. As you
 | *natural-language date* | Set the **do date** | `Call Sam tomorrow`, `Review in 2 days`, `Pay rent May 25`, `Plan last friday of may` |
 
 Notes on matching:
-- Tags / projects / boards / templates only match things that **already exist** (case-insensitive, spaces ignored). Unmatched tokens stay in the title.
-- Priority, project, board, template, and date take the **first** match; **tags** accept all matches.
-- Dates use forward-date logic ("tomorrow", "in 3 months", a weekday, or a specific date). Vague phrases like a bare month or a bare time are ignored on purpose.
-- In the popup, the date/priority/project/tag **icon pickers** override what you typed for that attribute (tags merge); the **Board** picker works the same way for `$board`.
-- `$board` is only recognized in the Quick Add popup (**a**), which shows a destination list/project picker to match — not in a list's inline quick-add box, since that box already implies its destination.
+- Tags, projects, boards, and templates only match things that **already exist** (case-insensitive, spaces ignored). If nothing matches, the token just stays in the title as plain text.
+- If you type more than one priority, project, board, or template, only the **first** one counts. Tags are the exception — you can add several.
+- Dates are always read as coming up next, never in the past — "tomorrow", "in 3 months", a weekday, or a specific date all work. A bare month name or a bare time on its own is ignored on purpose, since it's too vague to guess.
+- In the popup, if you also use the date/priority/project/tag **icon pickers**, they override whatever you typed for that attribute (tags are combined instead). The **Board** picker overrides `$board` the same way.
+- `$board` only works in the Quick Add popup (**a**), which shows a destination list/project picker to match it against. It doesn't work in a list's inline quick-add box, since that box already knows its destination.
 
 ### The task editor
 
 Click a card to open the detail editor. Fields available:
+
+![The task detail editor open for a task, showing notes, checklist, priority buttons, gem reward, and project fields](/img/screenshots/task-editor.png)
 
 | Field | Notes |
 | --- | --- |
@@ -66,10 +71,11 @@ Click a card to open the detail editor. Fields available:
 | **Milestone** | Attach the task to a milestone (parent). |
 | **Depends on** | Block this task until one or more other tasks on the same board are done. *(if Task Dependencies is on)* |
 | **Custom fields** | Structured metadata you've defined. *(if Custom Fields is on)* |
-| **Reminders** | Time-based or activity nudges. *(if Reminders is on)* — see [Settings & features → Reminders](settings-and-features.md#reminders) |
-| **Recurrence** | Make the task repeat. — see [Settings & features → Recurring tasks](settings-and-features.md#recurring-tasks) |
-| **Flexible** | Roll the do date to today, or expire the task, instead of it going overdue. *(if Flexible Tasks is on)* — see [Settings & features → Flexible tasks](settings-and-features.md#flexible-tasks) |
-| **Jira link** | Status syncs with the linked Jira issue. — see [Integrations → Jira](integrations.md#jira) |
+| **Reminders** | Time-based or activity nudges. *(if Reminders is on)* — see [Settings & features → Reminders](settings-and-features#reminders) |
+| **Recurrence** | Make the task repeat. — see [Settings & features → Recurring tasks](settings-and-features#recurring-tasks) |
+| **Flexible** | Roll the do date to today, or expire the task, instead of it going overdue. *(if Flexible Tasks is on)* — see [Settings & features → Flexible tasks](settings-and-features#flexible-tasks) |
+| **Jira link** | Status syncs with the linked Jira issue. — see [Integrations → Jira](integrations#jira) |
+| **Obsidian Base** | Link the task to an Obsidian base + view to show Next up / Remaining. *(if Obsidian Bases is on)* — see [Integrations → Obsidian Bases](integrations#obsidian-bases) |
 
 Press **⌘↵** (or **Ctrl+↵**) to save, **Esc** to close.
 
@@ -79,7 +85,10 @@ Every active task has a computed **availability** (you don't set it directly):
 
 - **Available** — ready to work on now.
 - **Deferred** — its **start date** is still in the future.
-- **Blocked** — it's waiting on something earlier: a child of a milestone that isn't its turn yet, a task in a **sequential** project/milestone whose predecessors aren't done, or a task listed in its **Depends on** field that isn't done yet.
+- **Blocked** — something else needs to happen first. This can mean:
+  - it's a milestone child and it isn't its turn yet,
+  - it's part of a **sequential** project/milestone and the tasks before it aren't done, or
+  - it lists other tasks in its **Depends on** field that aren't done yet.
 
 Use the board header's **Show** control to either hide unavailable tasks or show them greyed out.
 
@@ -101,4 +110,4 @@ The board header's **Card color** control tints cards by a chosen dimension:
 
 ## Milestones
 
-A milestone is a parent task that groups child tasks and tracks their progress (done/total). Assign a task to a milestone from its editor or the bulk bar. Milestones can be **sequential** (children unlock in order) or **parallel** (all available at once), which feeds the [availability](#availability-available--deferred--blocked) rules. Milestones also appear on the project timeline — see [Settings & features → Projects](settings-and-features.md#projects).
+A milestone is a parent task that groups child tasks and tracks their progress (done/total). Assign a task to a milestone from its editor or the bulk bar. Milestones can be **sequential** (children unlock in order) or **parallel** (all available at once), which feeds the [availability](#availability-available--deferred--blocked) rules. Milestones also appear on the project timeline — see [Settings & features → Projects](settings-and-features#projects). Right-click a milestone for quick actions: create task, complete, delete.

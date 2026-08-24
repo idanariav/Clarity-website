@@ -5,7 +5,7 @@ slug: /
 
 # Clarity — User Guide
 
-**Clarity** is a desktop task manager built around Kanban boards, with extra tools for people who want more structure than a plain to-do list: saved cross-board views, projects and milestones, a query language, automations, reminders, and two-way sync with Jira, Google Calendar, and Slack. You can also let an AI assistant manage your tasks through the built-in command-line tool.
+**Clarity** is a desktop task manager built around Kanban boards, with extra tools for people who want more structure than a plain to-do list: saved cross-board views, projects and milestones, a query language, automations, reminders, and two-way sync with Jira, GitHub, Google Calendar, Slack, and Obsidian. It also includes standalone habit tracking, a focus timer, a coins/gems reward system, and trip packing lists. You can also let an AI assistant manage your tasks through the built-in command-line tool.
 
 This guide explains what each feature does, how to use it, when it shows up, and what it's good for.
 
@@ -13,11 +13,13 @@ This guide explains what each feature does, how to use it, when it shows up, and
 
 | Guide | What's inside |
 | --- | --- |
-| [Getting started](getting-started) | First look, the sidebar, the five views, keyboard help |
+| [Getting started](getting-started) | First look, the sidebar, the main views, keyboard help |
 | [Boards & tasks](boards-and-tasks) | Boards, lists, cards, Quick Add, the task editor, bulk actions, card colors |
 | [Views & CQL](views-and-cql) | Saved filtered views, the Overview dashboard, the full query-language reference |
-| [Integrations](integrations) | Jira, Google Calendar, Slack, and the AI assistant CLI |
-| [Settings & features](settings-and-features) | Feature on/off switches, themes, shortcuts, reminders, recurrence, templates, custom fields, automations, column rules, the day planner |
+| [Integrations](integrations) | Jira, GitHub, Google Calendar, Slack, Obsidian Bases, and the AI assistant CLI |
+| [Settings & features](settings-and-features) | Feature on/off switches, themes, shortcuts, reminders, recurrence, templates, custom fields, automations, column rules, the day planner, the focus timer, rewards |
+| [Habits](habits) | Daily/weekly habits, streaks, goals, vacation mode, archiving |
+| [Packing](packing) | Packing templates, bags & compartments, per-trip lists |
 
 ## Feature map by goal
 
@@ -34,8 +36,15 @@ This guide explains what each feature does, how to use it, when it shows up, and
 - Templates, Automations, Column Rules → [Settings & features](settings-and-features)
 
 **Connect other tools**
-- Jira, Google Calendar, Slack → [Integrations](integrations)
+- Jira, GitHub, Google Calendar, Slack, Obsidian Bases → [Integrations](integrations)
 - AI assistant (CLI) → [Integrations](integrations)
+
+**Build habits & stay focused**
+- Habit streaks, goals, vacation mode → [Habits](habits)
+- Focus Timer, Rewards (coins/gems) → [Settings & features](settings-and-features)
+
+**Get ready for a trip**
+- Packing templates, bags, trip lists → [Packing](packing)
 
 **Make it yours**
 - Themes, accent colors, card layout, keyboard shortcuts → [Settings & features](settings-and-features)
