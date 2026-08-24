@@ -68,6 +68,9 @@ gain unauthorized access to our infrastructure or to other users' data. Don't us
 product, or resell or redistribute access to it. See [License grant](#license-grant) above for what the license
 does and doesn't cover.
 
+Good-faith security research conducted under our [Security Policy](/security) is authorized and doesn't violate
+this section.
+
 ## Termination
 
 We may suspend or terminate your access to the App if you violate these Terms — most commonly the

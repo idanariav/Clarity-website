@@ -48,6 +48,7 @@ that feature needs.
 | Recipient | What we send | Why |
 | --- | --- | --- |
 | **Supabase** (our backend) | Your account (email, password hash, OAuth identity), and — if Cloud Sync is on — your task/board content, habits, rewards, packing lists, and app preferences | Account login and cross-device sync. Hosted on Supabase's own cloud infrastructure. |
+| **Resend** (email delivery) | Your email address, and the content of account emails (email verification, password reset) | Delivers the transactional emails Supabase's authentication system sends on our behalf — sent from `noreply@clarity.idanariav.com`. |
 | **Cloudflare** (Turnstile) | Standard bot-check browser signals | Blocks automated sign-up/sign-in abuse. Shown on the sign-in, sign-up, and password-reset screens. |
 | **Atlassian (Jira)** *(if you connect it)* | Your API token (for authentication) and a status-change request when you move a linked task | Two-way status sync with your Jira issues. |
 | **Google (Calendar)** *(if you connect it)* | Your OAuth token, and task titles for tasks/focus sessions you push to your calendar | Two-way sync between your tasks and your Google Calendar. |
@@ -91,15 +92,19 @@ required by your local law). If you believe a child has provided us data, contac
 
 ## International data transfers
 
-Our service providers (Supabase, Cloudflare, Google, GitHub, Slack, Atlassian) operate global infrastructure, so
-your data may be processed outside your own country. Each of these providers maintains its own safeguards for
-handling international data transfers.
+Our service providers (Supabase, Resend, Cloudflare, Google, GitHub, Slack, Atlassian) operate global
+infrastructure, so your data may be processed outside your own country. Each of these providers maintains its own
+safeguards for handling international data transfers.
 
 ## Changes to this policy
 
 We may update this Privacy Policy from time to time; continued use of the App after a change means you accept the
 updated policy. Material changes — such as adding a new integration, sub-processor, or a payment processor — will
 be reflected here before they take effect.
+
+## Security
+
+Found a security issue? See our [Security Policy](/security) for how to report it.
 
 ## Contact
 
