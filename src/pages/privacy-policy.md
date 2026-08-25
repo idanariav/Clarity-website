@@ -5,7 +5,7 @@ description: What Clarity collects, where it's stored, and who it's shared with.
 
 # Privacy Policy
 
-_Last updated: August 24, 2026_
+_Last updated: August 25, 2026_
 
 > **Note:** this is a standard template for a small, solo-operated software product, not a substitute for legal
 > advice specific to your situation. It's provided here as a starting point and hasn't had a professional legal
@@ -84,6 +84,20 @@ device's hardware-backed encrypted storage (Android Keystore).
 You can delete your account at any time from within the App. This removes your account and Supabase-synced data
 from our backend. Since Clarity is local-first, deleting your account doesn't remotely wipe the copy of your data
 already stored on your own device(s) — you're always in control of that locally.
+
+## Your rights (GDPR/CCPA)
+
+Wherever these rights apply to you, here's how to exercise them directly in the App — no request or wait required:
+
+- **Access / portability ("give me everything you have"):** Settings → Privacy → **Export my data** writes a
+  single JSON file with every board, task, habit, reward, packing list, and setting stored on that device —
+  the same data Cloud Sync mirrors to our backend if it's on.
+- **Deletion ("delete me"):** Settings → Account → **Delete account** permanently removes your account and its
+  synced data from our backend (see "Data retention & deletion" above for what stays on-device).
+- **Know what we collect and share:** the "Data we collect" and "Who we share data with" sections above are a
+  complete account.
+
+Something these don't cover? Email us at the address below and we'll handle it directly.
 
 ## Children's privacy
 
