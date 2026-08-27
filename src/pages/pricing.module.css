@@ -24,7 +24,7 @@
 }
 
 [data-theme='dark'] .planIcon {
-  background: rgba(144, 157, 250, 0.16);
+  background: rgba(52, 211, 153, 0.16);
   color: var(--ifm-color-primary-light);
 }
 

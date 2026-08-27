@@ -105,6 +105,18 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="container margin-bottom--xl">
+          <div className="row">
+            <div className="col col--10 col--offset-1">
+              <img
+                className={styles.screenshot}
+                src="/img/screenshots/board-view.png"
+                alt="A Clarity board with Backlog, Doing, and Review lists holding task cards with priorities, tags, and due dates"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
         <HomepageFeatures />
       </main>
     </Layout>

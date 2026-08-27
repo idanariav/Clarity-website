@@ -60,10 +60,12 @@ const config = {
       ],
       image: 'img/social-card.png',
       navbar: {
-        title: 'Clarity',
         logo: {
-          alt: 'Clarity logo',
-          src: 'img/clarity-logo.png',
+          alt: 'Clarity',
+          src: 'img/clarity-wordmark.svg',
+          srcDark: 'img/clarity-wordmark-dark.svg',
+          width: 132,
+          height: 30,
         },
         items: [
           {to: '/docs', label: 'Docs', position: 'left'},

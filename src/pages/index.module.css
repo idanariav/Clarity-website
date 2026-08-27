@@ -61,7 +61,7 @@
 }
 
 [data-theme='dark'] .featureIcon {
-  background: rgba(144, 157, 250, 0.16);
+  background: rgba(52, 211, 153, 0.16);
   color: var(--ifm-color-primary-light);
 }
 
@@ -74,4 +74,12 @@
 
 .introIcon {
   color: var(--ifm-color-primary);
+}
+
+.screenshot {
+  display: block;
+  width: 100%;
+  border-radius: var(--ifm-card-border-radius, 8px);
+  border: 1px solid var(--ifm-toc-border-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
