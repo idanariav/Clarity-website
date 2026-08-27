@@ -62,3 +62,6 @@ or advertising subprocessors.
 
 **[idan@idanariav.com](mailto:idan@idanariav.com)** — also see our machine-readable
 [`/.well-known/security.txt`](/.well-known/security.txt) ([RFC 9116](https://www.rfc-editor.org/rfc/rfc9116)).
+
+For accessibility conformance details (relevant to some procurement reviews alongside this policy), see our
+[Accessibility Statement](/accessibility).

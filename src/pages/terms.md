@@ -71,6 +71,11 @@ does and doesn't cover.
 Good-faith security research conducted under our [Security Policy](/security) is authorized and doesn't violate
 this section.
 
+## Accessibility
+
+We aim for WCAG 2.1 Level AA conformance — see our [Accessibility Statement](/accessibility) for what's implemented
+today and known gaps.
+
 ## Termination
 
 We may suspend or terminate your access to the App if you violate these Terms — most commonly the
