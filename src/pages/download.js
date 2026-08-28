@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
@@ -5,6 +6,7 @@ import {Download, Laptop, MonitorSmartphone, Smartphone, Globe} from 'lucide-rea
 import styles from './download.module.css';
 
 const RELEASES_URL = 'https://github.com/idanariav/Clarity-releases/releases/latest';
+const LATEST_RELEASE_API = 'https://api.github.com/repos/idanariav/Clarity-releases/releases/latest';
 
 const COMING_SOON = [
   {icon: MonitorSmartphone, name: 'Windows'},
@@ -14,6 +16,24 @@ const COMING_SOON = [
 ];
 
 export default function DownloadPage() {
+  const [macDownloadUrl, setMacDownloadUrl] = useState(RELEASES_URL);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(LATEST_RELEASE_API)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((release) => {
+        const dmgAsset = release?.assets?.find((asset) => asset.name.endsWith('aarch64.dmg'));
+        if (dmgAsset && !cancelled) {
+          setMacDownloadUrl(dmgAsset.browser_download_url);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <Layout title="Download" description="Download Clarity for macOS.">
       <main className="container margin-vert--lg">
@@ -35,11 +55,11 @@ export default function DownloadPage() {
               </div>
               <Heading as="h3">macOS (Apple Silicon)</Heading>
               <p className={styles.cardNote}>Requires macOS on an M-series Mac.</p>
-              <Link className="button button--primary button--lg" to={RELEASES_URL}>
+              <Link className="button button--primary button--lg" to={macDownloadUrl}>
                 Download for macOS
               </Link>
               <p className={styles.cardSub}>
-                Opens the latest release on GitHub — grab the <code>.dmg</code> file.
+                Downloads the latest <code>.dmg</code> directly from GitHub.
               </p>
             </div>
           </div>
