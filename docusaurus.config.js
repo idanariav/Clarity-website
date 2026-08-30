@@ -90,6 +90,7 @@ const config = {
             title: 'Legal',
             items: [
               {label: 'Terms & Conditions', to: '/terms'},
+              {label: 'Privacy Policy', to: '/privacy-policy'},
               {label: 'Refund Policy', to: '/refund-policy'},
             ],
           },

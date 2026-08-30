@@ -5,7 +5,7 @@ description: What Clarity collects, where it's stored, and who it's shared with.
 
 # Privacy Policy
 
-_Last updated: August 25, 2026_
+_Last updated: August 30, 2026_
 
 > **Note:** this is a standard template for a small, solo-operated software product, not a substitute for legal
 > advice specific to your situation. It's provided here as a starting point and hasn't had a professional legal
@@ -51,13 +51,24 @@ that feature needs.
 | **Resend** (email delivery) | Your email address, and the content of account emails (email verification, password reset) | Delivers the transactional emails Supabase's authentication system sends on our behalf — sent from `noreply@clarity.idanariav.com`. |
 | **Cloudflare** (Turnstile) | Standard bot-check browser signals | Blocks automated sign-up/sign-in abuse. Shown on the sign-in, sign-up, and password-reset screens. |
 | **Atlassian (Jira)** *(if you connect it)* | Your API token (for authentication) and a status-change request when you move a linked task | Two-way status sync with your Jira issues. |
-| **Google (Calendar)** *(if you connect it)* | Your OAuth token, and task titles for tasks/focus sessions you push to your calendar | Two-way sync between your tasks and your Google Calendar. |
+| **Google (Calendar)** *(if you connect it)* | Your OAuth token, and task titles for tasks/focus sessions you push to your calendar. See the note below on how the token itself is obtained. | Two-way sync between your tasks and your Google Calendar. |
 | **Slack** *(if you connect it)* | Your OAuth token; nothing is sent automatically — only used to fetch a message's text when you manually paste its permalink | Turns a Slack message you choose into a task. |
 | **GitHub** *(if you connect it)* | Your personal access token (read-only) | Looks up PR/branch status for Jira-linked cards. Clarity never writes to GitHub. |
 | **Obsidian** *(if you use it)* | Nothing — Clarity only runs a query against Obsidian on your own machine, with no network request of any kind | Shows progress from a linked Obsidian Bases view. |
 | **A payment processor** *(not yet live)* | Not applicable yet — Clarity doesn't process payments directly today. When checkout ships, a named third-party payment processor will handle it, and this page will be updated before that happens. | Billing. |
 
 None of the above sell your data or use it for advertising.
+
+### A note on Google Calendar's OAuth exchange
+
+If you connect Google Calendar using Clarity's built-in connection (the default "Connect" button, with no
+setup required from you), the one-time step of turning your Google sign-in into an access token — and later
+refreshing it — is routed through a Supabase-hosted function (`oauth-token-exchange`) we operate. This exists so
+Clarity's own OAuth client secret never has to ship inside the app itself. That function only ever handles the
+token exchange: your actual calendar data (events, titles, sync traffic) still travels directly between your
+device and Google's API, never through Supabase. If you instead supply your own Google OAuth client (the
+"Use my own Google OAuth client" option), the token exchange happens directly between your device and Google,
+with no Supabase involvement at all.
 
 ### A note on Jira and GitHub content
 
@@ -81,9 +92,14 @@ device's hardware-backed encrypted storage (Android Keystore).
 
 ## Data retention & deletion
 
-You can delete your account at any time from within the App. This removes your account and Supabase-synced data
-from our backend. Since Clarity is local-first, deleting your account doesn't remotely wipe the copy of your data
-already stored on your own device(s) — you're always in control of that locally.
+You can delete your account at any time from within the App: **Settings → Account → Delete account**. This
+immediately and permanently removes your account and all Supabase-synced data from our backend. Since Clarity is
+local-first, deleting your account doesn't remotely wipe the copy of your data already stored on your own
+device(s) — you're always in control of that locally.
+
+Don't have the App installed, or can't sign in? Email **[idan@idanariav.com](mailto:idan@idanariav.com)** from the
+address on the account and we'll delete your account and its synced data within 30 days, without requiring you to
+install or open the App.
 
 ## Your rights (GDPR/CCPA)
 
