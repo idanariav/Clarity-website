@@ -5,7 +5,7 @@ description: What Clarity collects, where it's stored, and who it's shared with.
 
 # Privacy Policy
 
-_Last updated: August 30, 2026_
+_Last updated: September 1, 2026_
 
 > **Note:** this is a standard template for a small, solo-operated software product, not a substitute for legal
 > advice specific to your situation. It's provided here as a starting point and hasn't had a professional legal
@@ -69,6 +69,18 @@ token exchange: your actual calendar data (events, titles, sync traffic) still t
 device and Google's API, never through Supabase. If you instead supply your own Google OAuth client (the
 "Use my own Google OAuth client" option), the token exchange happens directly between your device and Google,
 with no Supabase involvement at all.
+
+### Google API Services User Data Policy & Limited Use
+
+Clarity's use and transfer to any other app of information received from Google APIs adheres to the
+[Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy),
+including the Limited Use requirements.
+
+Concretely: Clarity does not use any AI/ML model — its own or a third party's — in its handling of your Google
+Calendar data. That data is never used to train, improve, or evaluate any AI/ML model, whether generalized or
+specialized, and it's never shared with or transmitted to any AI/ML service. See "Who we share data with" above
+for the complete, exhaustive list of who Clarity talks to, and "A note on Google Calendar's OAuth exchange" above
+for exactly how your calendar data flows when you connect it.
 
 ### A note on Jira and GitHub content
 
