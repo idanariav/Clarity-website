@@ -117,6 +117,7 @@ const config = {
       /** @type {Partial<import("@easyops-cn/docusaurus-search-local").PluginOptions>} */
       ({
         hashed: true,
+        indexPages: true,
       }),
     ],
   ],
