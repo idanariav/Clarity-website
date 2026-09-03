@@ -5,7 +5,7 @@ description: What Clarity collects, where it's stored, and who it's shared with.
 
 # Privacy Policy
 
-_Last updated: September 1, 2026_
+_Last updated: September 3, 2026_
 
 > **Note:** this is a standard template for a small, solo-operated software product, not a substitute for legal
 > advice specific to your situation. It's provided here as a starting point and hasn't had a professional legal
@@ -50,7 +50,7 @@ that feature needs.
 | **Supabase** (our backend) | Your account (email, password hash, OAuth identity), and — if Cloud Sync is on — your task/board content, habits, rewards, packing lists, and app preferences | Account login and cross-device sync. Hosted on Supabase's own cloud infrastructure. |
 | **Resend** (email delivery) | Your email address, and the content of account emails (email verification, password reset) | Delivers the transactional emails Supabase's authentication system sends on our behalf — sent from `noreply@clarity.idanariav.com`. |
 | **Cloudflare** (Turnstile) | Standard bot-check browser signals | Blocks automated sign-up/sign-in abuse. Shown on the sign-in, sign-up, and password-reset screens. |
-| **Atlassian (Jira)** *(if you connect it)* | Your API token (for authentication) and a status-change request when you move a linked task | Two-way status sync with your Jira issues. |
+| **Atlassian (Jira)** *(if you connect it)* | Your API token or OAuth token (for authentication, depending on how you connect), and a status-change request when you move a linked task | Two-way status sync with your Jira issues. |
 | **Google (Calendar)** *(if you connect it)* | Your OAuth token, and task titles for tasks/focus sessions you push to your calendar. See the note below on how the token itself is obtained. | Two-way sync between your tasks and your Google Calendar. |
 | **Slack** *(if you connect it)* | Your OAuth token; nothing is sent automatically — only used to fetch a message's text when you manually paste its permalink | Turns a Slack message you choose into a task. |
 | **GitHub** *(if you connect it)* | Your personal access token (read-only) | Looks up PR/branch status for Jira-linked cards. Clarity never writes to GitHub. |
@@ -69,6 +69,16 @@ token exchange: your actual calendar data (events, titles, sync traffic) still t
 device and Google's API, never through Supabase. If you instead supply your own Google OAuth client (the
 "Use my own Google OAuth client" option), the token exchange happens directly between your device and Google,
 with no Supabase involvement at all.
+
+### A note on Jira's OAuth exchange
+
+If you connect Jira using the "Connect with Atlassian" button, the same kind of one-time exchange described above
+for Google Calendar applies: turning your Atlassian sign-in into an access token, and later refreshing it, is
+routed through the same Supabase-hosted function (`oauth-token-exchange`) so Clarity's own OAuth client secret
+never has to ship inside the app. That function only ever handles the token exchange — your actual Jira issue data
+still travels directly between your device and Atlassian's API, never through Supabase. If you instead connect Jira
+with your own API token (Settings → "Or connect with an API token"), there's no OAuth exchange at all and no
+Supabase involvement in authenticating with Jira.
 
 ### Google API Services User Data Policy & Limited Use
 
@@ -97,8 +107,8 @@ Supabase like the rest of that task.
 
 ## How your data is stored on your device
 
-Your local database is encrypted at rest. Integration credentials (Jira API tokens, GitHub tokens, Google/Slack
-OAuth tokens) are kept in a separate, permission-restricted file outside that database — never in the synced
+Your local database is encrypted at rest. Integration credentials (Jira API or OAuth tokens, GitHub tokens,
+Google/Slack OAuth tokens) are kept in a separate, permission-restricted file outside that database — never in the synced
 database itself, and never sent to Supabase. On Android, these credentials are additionally protected by the
 device's hardware-backed encrypted storage (Android Keystore).
 
