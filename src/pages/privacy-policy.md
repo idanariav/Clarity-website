@@ -5,7 +5,7 @@ description: What Clarity collects, where it's stored, and who it's shared with.
 
 # Privacy Policy
 
-_Last updated: September 3, 2026_
+_Last updated: September 4, 2026_
 
 > **Note:** this is a standard template for a small, solo-operated software product, not a substitute for legal
 > advice specific to your situation. It's provided here as a starting point and hasn't had a professional legal
@@ -79,6 +79,19 @@ never has to ship inside the app. That function only ever handles the token exch
 still travels directly between your device and Atlassian's API, never through Supabase. If you instead connect Jira
 with your own API token (Settings → "Or connect with an API token"), there's no OAuth exchange at all and no
 Supabase involvement in authenticating with Jira.
+
+### A note on Slack's OAuth exchange
+
+Every Slack connection uses Clarity's own bundled OAuth app — there's no option to supply your own. Clicking
+"Connect" turns your Slack sign-in into a user token via the same Supabase-hosted function
+(`oauth-token-exchange`) described above, for the same reason: so Clarity's own OAuth client secret never has to
+ship inside the app. Slack additionally requires every OAuth redirect to use HTTPS, so — unlike Google Calendar and
+Jira, whose desktop connect flow redirects your browser straight back to the app — the one-time authorization code
+in Slack's redirect briefly passes through a small Supabase-hosted page (`oauth-slack-redirect`) that forwards it
+straight back to the app running on your device; that page doesn't store anything and never sees your access
+token, only the one-time code. Your Slack message text itself is fetched directly between your device and Slack's
+API when you paste a permalink, never through Supabase. Unlike Google Calendar and Jira, Slack tokens don't
+expire, so there's no ongoing refresh step.
 
 ### Google API Services User Data Policy & Limited Use
 
