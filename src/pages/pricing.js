@@ -31,7 +31,7 @@ const PLANS = [
     name: 'Lifetime',
     price: '$30',
     period: 'one-time',
-    caveat: "Local-only — doesn't include cross-device Cloud Sync",
+    caveat: "Syncs via your own Google Drive or iCloud, not Cloud Sync",
   },
 ];
 

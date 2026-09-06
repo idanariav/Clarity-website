@@ -52,9 +52,10 @@ We offer monthly and yearly subscriptions, and a one-time lifetime purchase. Cur
     that version.
 
   It does **not** include:
-  - **Cloud Sync.** Lifetime accounts run local-only — your data stays on the device you use it on. If you use the
-    App on more than one device, it won't automatically stay in sync between them (this may change in the future,
-    but isn't something we currently offer to Lifetime accounts).
+  - **Cloud Sync.** Lifetime accounts don't include our hosted Cloud Sync. You can still keep your data current
+    across devices using Google Drive Sync (desktop) or iCloud Sync (macOS and iOS) instead — both sync through
+    your own Google or Apple storage, at no extra cost, rather than through our infrastructure. See the app's
+    Settings to set either one up.
   - **Future major versions.** Access to a new major version of the App requires a separate purchase or a
     subscription. We may limit the updates a Lifetime install can take once we release a major version it isn't
     entitled to.

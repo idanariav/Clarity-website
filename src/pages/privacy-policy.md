@@ -31,9 +31,11 @@ identifiers those providers return (typically your name and email). We don't use
 Titles, notes, dates, tags, checklists, custom fields, projects, milestones, habits, rewards, and packing lists you
 create in Clarity are stored in a local, **encrypted-at-rest** database on your device (via SQLCipher).
 
-If **Cloud Sync** is on (included with subscriptions; not included with a Lifetime purchase — see our
+If **Cloud Sync** is on (included with subscriptions, not with a Lifetime purchase — see our
 [Terms](/terms#plans)), this same content is also sent to our Supabase-hosted backend so it's available on your
-other signed-in devices. If Cloud Sync is off, none of it leaves your device.
+other signed-in devices. Lifetime accounts can instead turn on **Google Drive Sync** or **iCloud Sync** (see "Who
+we share data with" below) to keep this same content current across devices through their own Google/Apple storage
+instead of ours. If none of these are on, none of it leaves your device.
 
 ### Diagnostics, analytics, and advertising
 
@@ -54,6 +56,8 @@ that feature needs.
 | **Google (Calendar)** *(if you connect it)* | Your OAuth token, and task titles for tasks/focus sessions you push to your calendar. See the note below on how the token itself is obtained. | Two-way sync between your tasks and your Google Calendar. |
 | **Slack** *(if you connect it)* | Your OAuth token; nothing is sent automatically — only used to fetch a message's text when you manually paste its permalink | Turns a Slack message you choose into a task. |
 | **GitHub** *(if you connect it)* | Your personal access token (read-only) | Looks up PR/branch status for Jira-linked cards. Clarity never writes to GitHub. |
+| **Google Drive** *(Lifetime accounts only, if you turn on Google Drive Sync)* | Your OAuth token, and your task/board content (the same data Cloud Sync would sync) — stored in an app-private area of your Drive that only Clarity can access, invisible in your regular Drive files. See the note below on how the token is obtained. | An alternative to Cloud Sync for Lifetime accounts: keeps your data current across devices through your own Google Drive storage instead of our infrastructure. |
+| **Apple (iCloud)** *(Lifetime accounts only, macOS/iOS, if you turn on iCloud Sync)* | Your task/board content (the same data Cloud Sync would sync) | Same purpose as Google Drive above, through your iCloud account instead — handled entirely by macOS/iOS's built-in iCloud APIs. There's no OAuth token and no server of ours in this path at all: your content travels only between your own devices and Apple's iCloud servers. |
 | **Obsidian** *(if you use it)* | Nothing — Clarity only runs a query against Obsidian on your own machine, with no network request of any kind | Shows progress from a linked Obsidian Bases view. |
 | **A payment processor** *(not yet live)* | Not applicable yet — Clarity doesn't process payments directly today. When checkout ships, a named third-party payment processor will handle it, and this page will be updated before that happens. | Billing. |
 
@@ -70,6 +74,26 @@ device and Google's API, never through Supabase. If you instead supply your own 
 "Use my own Google OAuth client" option), the token exchange happens directly between your device and Google,
 with no Supabase involvement at all.
 
+### A note on Google Drive's OAuth exchange
+
+Google Drive Sync uses a narrower Google OAuth scope than Google Calendar — `drive.appdata`, which only grants
+access to a hidden, app-private storage area, not your visible Drive files or folders. If you connect using
+Clarity's built-in connection (the default "Connect" button), the token exchange is routed through the same
+Supabase-hosted function (`oauth-token-exchange`) described above for Google Calendar, for the same reason: so
+Clarity's own OAuth client secret never has to ship inside the app. That function only ever handles the token
+exchange — your actual task/board content still travels directly between your device and Google's API, never
+through Supabase. If you instead supply your own Google OAuth client, the token exchange happens directly between
+your device and Google, with no Supabase involvement at all.
+
+### A note on iCloud Sync
+
+Unlike every other integration on this page, iCloud Sync involves no OAuth and no server of ours whatsoever. It
+works entirely through Apple's built-in iCloud APIs: Clarity writes your task/board content to a private,
+app-scoped folder inside your iCloud account, and macOS/iOS's own iCloud sync keeps that folder current across
+your signed-in devices. Nothing passes through Clarity's or Supabase's infrastructure at any point — this data's
+only destination beyond your own devices is Apple's iCloud service, under whatever agreement you already have with
+Apple for using iCloud.
+
 ### A note on Jira's OAuth exchange
 
 If you connect Jira using the "Connect with Atlassian" button, the same kind of one-time exchange described above
@@ -85,11 +109,12 @@ Supabase involvement in authenticating with Jira.
 Every Slack connection uses Clarity's own bundled OAuth app — there's no option to supply your own. Clicking
 "Connect" turns your Slack sign-in into a user token via the same Supabase-hosted function
 (`oauth-token-exchange`) described above, for the same reason: so Clarity's own OAuth client secret never has to
-ship inside the app. Slack additionally requires every OAuth redirect to use HTTPS, so — unlike Google Calendar and
-Jira, whose desktop connect flow redirects your browser straight back to the app — the one-time authorization code
-in Slack's redirect briefly passes through a small Supabase-hosted page (`oauth-slack-redirect`) that forwards it
-straight back to the app running on your device; that page doesn't store anything and never sees your access
-token, only the one-time code. Your Slack message text itself is fetched directly between your device and Slack's
+ship inside the app. Slack additionally requires every OAuth redirect to use HTTPS, so — unlike Google Calendar,
+Google Drive, and Jira, whose desktop connect flow redirects your browser straight back to the app — the one-time
+authorization code in Slack's redirect briefly passes through a small Supabase-hosted page
+(`oauth-slack-redirect`) that forwards it straight back to the app running on your device; that page doesn't store
+anything and never sees your access token, only the one-time code. Your Slack message text itself is fetched
+directly between your device and Slack's
 API when you paste a permalink, never through Supabase. Unlike Google Calendar and Jira, Slack tokens don't
 expire, so there's no ongoing refresh step.
 
@@ -100,10 +125,11 @@ Clarity's use and transfer to any other app of information received from Google 
 including the Limited Use requirements.
 
 Concretely: Clarity does not use any AI/ML model — its own or a third party's — in its handling of your Google
-Calendar data. That data is never used to train, improve, or evaluate any AI/ML model, whether generalized or
-specialized, and it's never shared with or transmitted to any AI/ML service. See "Who we share data with" above
-for the complete, exhaustive list of who Clarity talks to, and "A note on Google Calendar's OAuth exchange" above
-for exactly how your calendar data flows when you connect it.
+Calendar or Google Drive data. That data is never used to train, improve, or evaluate any AI/ML model, whether
+generalized or specialized, and it's never shared with or transmitted to any AI/ML service. See "Who we share data
+with" above for the complete, exhaustive list of who Clarity talks to, and "A note on Google Calendar's OAuth
+exchange" / "A note on Google Drive's OAuth exchange" above for exactly how that data flows when you connect
+either one.
 
 ### A note on Jira and GitHub content
 
