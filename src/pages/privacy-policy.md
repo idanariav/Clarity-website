@@ -39,8 +39,13 @@ instead of ours. If none of these are on, none of it leaves your device.
 
 ### Diagnostics, analytics, and advertising
 
-**We don't use any of these.** Clarity has no crash-reporting SDK, no analytics or usage-tracking SDK, and no
-advertising SDK of any kind — nothing beyond what's described on this page leaves your device.
+Clarity has no analytics or usage-tracking SDK and no advertising SDK of any kind.
+
+**Crash reporting (optional, off by default):** Settings → Privacy has a **Send crash reports** toggle. Turning it
+on lets Clarity send a report via Sentry if the app hits an unexpected error. Before anything leaves your device,
+it's stripped down to a stack trace plus the app version and OS — never your account identity, your task/board
+content, or your recent activity (breadcrumbs) inside the app. Turning the toggle off stops reporting immediately,
+not just on your next launch.
 
 ## Who we share data with
 
@@ -52,6 +57,7 @@ that feature needs.
 | **Supabase** (our backend) | Your account (email, password hash, OAuth identity), and — if Cloud Sync is on — your task/board content, habits, rewards, packing lists, and app preferences | Account login and cross-device sync. Hosted on Supabase's own cloud infrastructure. |
 | **Resend** (email delivery) | Your email address, and the content of account emails (email verification, password reset) | Delivers the transactional emails Supabase's authentication system sends on our behalf — sent from `noreply@clarity.idanariav.com`. |
 | **Cloudflare** (Turnstile) | Standard bot-check browser signals | Blocks automated sign-up/sign-in abuse. Shown on the sign-in, sign-up, and password-reset screens. |
+| **Sentry** *(only if you turn on crash reporting)* | A stack trace, plus app version and OS — never your account identity, task/board content, or in-app activity | Helps us find and fix bugs. Off by default; only sent if you opt in via Settings → Privacy. |
 | **Atlassian (Jira)** *(if you connect it)* | Your API token or OAuth token (for authentication, depending on how you connect), and a status-change request when you move a linked task | Two-way status sync with your Jira issues. |
 | **Google (Calendar)** *(if you connect it)* | Your OAuth token, and task titles for tasks/focus sessions you push to your calendar. See the note below on how the token itself is obtained. | Two-way sync between your tasks and your Google Calendar. |
 | **Slack** *(if you connect it)* | Your OAuth token; nothing is sent automatically — only used to fetch a message's text when you manually paste its permalink | Turns a Slack message you choose into a task. |
