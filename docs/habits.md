@@ -60,4 +60,4 @@ Use a habit's **⋯** menu to **Archive** it — it moves to a read-only Archive
 
 ## Android home-screen widget
 
-If you use Clarity on Android, a home-screen widget can show your habits as compact streak rings alongside your task list. Tapping a ring completes that habit for the day directly from the home screen — no need to open the app. It works offline and syncs in the background when you do have a connection. (Desktop has no equivalent widget.)
+If you use Clarity HQ on Android, a home-screen widget can show your habits as compact streak rings alongside your task list. Tapping a ring completes that habit for the day directly from the home screen — no need to open the app. It works offline and syncs in the background when you do have a connection. (Desktop has no equivalent widget.)

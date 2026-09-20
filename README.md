@@ -1,4 +1,4 @@
-# Clarity website
+# Clarity HQ website
 
 Landing page, docs, pricing, and legal pages for [Clarity](https://github.com/idanariav/Clarity), built with
 [Docusaurus](https://docusaurus.io/). Deployed to `clarity.idanariav.com` via GitHub Pages.
@@ -24,7 +24,7 @@ once, in this repo's Settings → Pages.
 
 ## Content
 
-- `docs/` — the user guide, mirrored from `Clarity/docs/user-guide/`. Update there first, then re-copy here.
+- `docs/` — the user guide, mirrored from `Clarity HQ/docs/user-guide/`. Update there first, then re-copy here.
 - `src/pages/index.js` — landing page.
 - `src/pages/pricing.js` — pricing (currently the beta/early-bird rates).
 - `src/pages/download.js` — download page, links out to the `idanariav/Clarity-releases` GitHub releases.

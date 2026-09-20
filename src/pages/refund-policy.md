@@ -1,13 +1,13 @@
 ---
 title: Refund Policy
-description: Clarity's refund policy.
+description: Clarity HQ's refund policy.
 ---
 
 # Refund Policy
 
 _Last updated: August 23, 2026_
 
-We want you to be happy with Clarity. If you're not, we'll refund you.
+We want you to be happy with Clarity HQ. If you're not, we'll refund you.
 
 ## The policy
 
@@ -25,11 +25,11 @@ business days.
 
 ## Trials
 
-The 30-day free trial before any purchase means you can try Clarity fully before paying anything — we'd encourage
+The 30-day free trial before any purchase means you can try Clarity HQ fully before paying anything — we'd encourage
 using the trial to decide before purchasing, but the refund window above still applies if you'd rather try it with a
 purchase already made.
 
 ## Payment processing
 
-Clarity's payments are processed by a third-party merchant of record, who may have their own buyer-protection
+Clarity HQ's payments are processed by a third-party merchant of record, who may have their own buyer-protection
 policies in addition to this one. Refer to your purchase receipt for the processor's own terms.

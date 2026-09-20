@@ -1,6 +1,6 @@
 ---
 title: Security Policy
-description: How to report a security issue in Clarity, and what to expect.
+description: How to report a security issue in Clarity HQ, and what to expect.
 ---
 
 # Security Policy
@@ -28,13 +28,13 @@ We'll keep you updated as we work on a fix, and — if you'd like — credit you
 
 **In scope:**
 
-- The Clarity desktop app (Windows/macOS/Linux builds) and its Android app.
+- The Clarity HQ desktop app (Windows/macOS/Linux builds) and its Android app.
 - This website (`clarity.idanariav.com`).
 - Our backend (Supabase project) to the extent it's reachable from the app or website.
 
 **Out of scope:**
 
-- Third-party services Clarity integrates with (Jira, Google, Slack, GitHub, Obsidian, Cloudflare, Resend) — please
+- Third-party services Clarity HQ integrates with (Jira, Google, Slack, GitHub, Obsidian, Cloudflare, Resend) — please
   report issues in those directly to their own security teams.
 - Social engineering, physical attacks, or denial-of-service testing against our infrastructure.
 - Issues that require a jailbroken/rooted device or physical access to an unlocked, already-compromised device.
@@ -52,7 +52,7 @@ This applies as long as you:
 
 ## Subprocessors
 
-Clarity shares data with a small number of named third parties as part of running the product — see our
+Clarity HQ shares data with a small number of named third parties as part of running the product — see our
 [Privacy Policy](/privacy-policy#who-we-share-data-with) for the full list of what's sent to each and why. In
 short: **Supabase** (backend/auth/sync), **Resend** (transactional email), and **Cloudflare** (bot-check on
 sign-in). A payment processor will be added here once checkout ships. We don't use any analytics, crash-reporting,

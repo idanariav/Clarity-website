@@ -3,9 +3,9 @@ sidebar_position: 1
 slug: /
 ---
 
-# Clarity — User Guide
+# Clarity HQ — User Guide
 
-**Clarity** is a desktop task manager built around Kanban boards, with extra tools for people who want more structure than a plain to-do list: saved cross-board views, projects and milestones, a query language, automations, reminders, and two-way sync with Jira, GitHub, Google Calendar, Slack, and Obsidian. It also includes standalone habit tracking, a focus timer, a coins/gems reward system, and trip packing lists. You can also let an AI assistant manage your tasks through the built-in command-line tool.
+**Clarity HQ** is a desktop task manager built around Kanban boards, with extra tools for people who want more structure than a plain to-do list: saved cross-board views, projects and milestones, a query language, automations, reminders, and two-way sync with Jira, GitHub, Google Calendar, Slack, and Obsidian. It also includes standalone habit tracking, a focus timer, a coins/gems reward system, and trip packing lists. You can also let an AI assistant manage your tasks through the built-in command-line tool.
 
 This guide explains what each feature does, how to use it, when it shows up, and what it's good for.
 

@@ -1,17 +1,17 @@
 ---
 title: Support
-description: Get help with Clarity — contact, documentation, and answers to common questions.
+description: Get help with Clarity HQ — contact, documentation, and answers to common questions.
 ---
 
-# Clarity Support
+# Clarity HQ Support
 
-Need help with Clarity? Start here.
+Need help with Clarity HQ? Start here.
 
 ## Contact
 
 Email **[idan@idanariav.com](mailto:idan@idanariav.com)**. Please include:
 
-- The platform you're on (macOS, Windows, iOS, Android) and your Clarity version (Settings → About).
+- The platform you're on (macOS, Windows, iOS, Android) and your Clarity HQ version (Settings → About).
 - What you expected to happen and what happened instead.
 - Screenshots or steps to reproduce, if you have them.
 

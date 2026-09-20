@@ -43,14 +43,14 @@ export default function DownloadPage() {
   }, []);
 
   return (
-    <Layout title="Download" description="Download Clarity for macOS and Windows.">
+    <Layout title="Download" description="Download Clarity HQ for macOS and Windows.">
       <main className="container margin-vert--lg">
         <div className="row">
           <div className="col col--8 col--offset-2 text--center margin-bottom--lg">
             <Download className={styles.headerIcon} size={32} strokeWidth={1.5} />
-            <Heading as="h1">Download Clarity</Heading>
+            <Heading as="h1">Download Clarity HQ</Heading>
             <p>
-              Clarity is available today for <strong>macOS on Apple Silicon</strong> (M-series chips) and{' '}
+              Clarity HQ is available today for <strong>macOS on Apple Silicon</strong> (M-series chips) and{' '}
               <strong>Windows</strong>. macOS builds are signed, notarized, and auto-update in place.
             </p>
           </div>

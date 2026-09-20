@@ -19,13 +19,13 @@ const FEATURES = [
   },
   {
     icon: Globe,
-    title: 'Clarity, everywhere',
+    title: 'Clarity HQ, everywhere',
     description: 'Desktop and Android today, with iOS and web on the way — your boards follow you, wherever you work.',
   },
   {
     icon: Layers,
     title: 'Built for power users',
-    description: 'Tasks, habits, packing lists, projects, and so much more — Clarity scales past a simple to-do list without getting in your way.',
+    description: 'Tasks, habits, packing lists, projects, and so much more — Clarity HQ scales past a simple to-do list without getting in your way.',
   },
 ];
 
@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Clarity is a desktop task manager built around Kanban boards, with saved views, a query language, automations, and two-way sync with Jira, Google Calendar, and Slack.">
+      description="Clarity HQ is a desktop task manager built around Kanban boards, with saved views, a query language, automations, and two-way sync with Jira, Google Calendar, and Slack.">
       <HomepageHeader />
       <main>
         <section className="container margin-vert--lg">
@@ -97,7 +97,7 @@ export default function Home() {
             <div className={clsx('col col--8 col--offset-2 text--center', styles.introRow)}>
               <ListChecks className={styles.introIcon} size={32} strokeWidth={1.5} />
               <p>
-                <strong>Clarity</strong> is a desktop task manager built around Kanban boards, with extra tools for
+                <strong>Clarity HQ</strong> is a desktop task manager built around Kanban boards, with extra tools for
                 people who want more structure than a plain to-do list: saved cross-board views, projects and
                 milestones, a query language, automations, reminders, and two-way sync with Jira, Google Calendar,
                 and Slack.
@@ -111,7 +111,7 @@ export default function Home() {
               <img
                 className={styles.screenshot}
                 src="/img/screenshots/board-view.png"
-                alt="A Clarity board with Backlog, Doing, and Review lists holding task cards with priorities, tags, and due dates"
+                alt="A Clarity HQ board with Backlog, Doing, and Review lists holding task cards with priorities, tags, and due dates"
                 loading="lazy"
               />
             </div>

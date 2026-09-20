@@ -1,6 +1,6 @@
 ---
 title: Accessibility
-description: Clarity's WCAG 2.1 AA accessibility conformance statement — what's implemented today and what's not yet.
+description: Clarity HQ's WCAG 2.1 AA accessibility conformance statement — what's implemented today and what's not yet.
 ---
 
 # Accessibility Statement
@@ -9,7 +9,7 @@ _Last updated: August 27, 2026_
 
 > **Note:** this is a self-assessment against WCAG success criteria, not a certified VPAT or a third-party audit.
 
-Clarity targets **[WCAG 2.1](https://www.w3.org/TR/WCAG21/) Level AA** as its accessibility standard. This page
+Clarity HQ targets **[WCAG 2.1](https://www.w3.org/TR/WCAG21/) Level AA** as its accessibility standard. This page
 summarizes current conformance status for procurement, security, and accessibility reviews.
 
 ## What's implemented

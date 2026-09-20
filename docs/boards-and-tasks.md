@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Boards & Tasks
 
-The core of Clarity: boards hold lists, lists hold task cards.
+The core of Clarity HQ: boards hold lists, lists hold task cards.
 
 ## Boards
 
@@ -30,7 +30,7 @@ A card is a task. Create one by typing in a list's quick-add box, or with the Qu
 
 ### Quick Add
 
-Press **a** for the Quick Add popup, or type in any list's quick-add box. As you type the **title**, Clarity recognizes shorthand **tokens** and lifts them out of the title:
+Press **a** for the Quick Add popup, or type in any list's quick-add box. As you type the **title**, Clarity HQ recognizes shorthand **tokens** and lifts them out of the title:
 
 ![The Quick Add popup with the text \"Fix login !1 #incident tomorrow\" typed in, showing the priority, tag, and date tokens highlighted in the title](/img/screenshots/quick-add-popup.png)
 

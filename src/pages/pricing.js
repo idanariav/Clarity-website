@@ -65,14 +65,14 @@ function Plan({icon: Icon, name, price, period, caveat}) {
 
 export default function Pricing() {
   return (
-    <Layout title="Pricing" description="Clarity pricing — early-bird rates for beta users.">
+    <Layout title="Pricing" description="Clarity HQ pricing — early-bird rates for beta users.">
       <main className="container margin-vert--lg">
         <div className="row">
           <div className="col col--8 col--offset-2 text--center margin-bottom--lg">
             <Sparkles className={styles.headerIcon} size={32} strokeWidth={1.5} />
             <Heading as="h1">Pricing</Heading>
             <p>
-              Clarity is in beta. Everyone who signs up during the beta window keeps these rates{' '}
+              Clarity HQ is in beta. Everyone who signs up during the beta window keeps these rates{' '}
               <strong>for as long as they stay subscribed or after buying lifetime</strong> — even after the price
               goes up once the product is out of beta. All plans include a 30-day free trial.
             </p>

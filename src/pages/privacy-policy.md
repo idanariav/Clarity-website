@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-description: What Clarity collects, where it's stored, and who it's shared with.
+description: What Clarity HQ collects, where it's stored, and who it's shared with.
 ---
 
 # Privacy Policy
@@ -11,10 +11,10 @@ _Last updated: September 4, 2026_
 > advice specific to your situation. It's provided here as a starting point and hasn't had a professional legal
 > review.
 
-This Privacy Policy explains what data Clarity (the "App"), operated by **Idan Ariav** ("we", "us"), collects,
+This Privacy Policy explains what data Clarity HQ (the "App"), operated by **Idan Ariav** ("we", "us"), collects,
 where it's stored, and who it's shared with. It's meant to be read alongside our [Terms & Conditions](/terms).
 
-Clarity is a **local-first** app: your boards and tasks live in a database on your own device first, and are only
+Clarity HQ is a **local-first** app: your boards and tasks live in a database on your own device first, and are only
 sent anywhere else if you turn on Cloud Sync or connect an integration.
 
 ## Data we collect
@@ -29,7 +29,7 @@ identifiers those providers return (typically your name and email). We don't use
 ### Your content — boards, tasks, and everything in them
 
 Titles, notes, dates, tags, checklists, custom fields, projects, milestones, habits, rewards, and packing lists you
-create in Clarity are stored in a local, **encrypted-at-rest** database on your device (via SQLCipher).
+create in Clarity HQ are stored in a local, **encrypted-at-rest** database on your device (via SQLCipher).
 
 If **Cloud Sync** is on (included with subscriptions, not with a Lifetime purchase — see our
 [Terms](/terms#plans)), this same content is also sent to our Supabase-hosted backend so it's available on your
@@ -39,17 +39,17 @@ instead of ours. If none of these are on, none of it leaves your device.
 
 ### Diagnostics, analytics, and advertising
 
-Clarity has no analytics or usage-tracking SDK and no advertising SDK of any kind.
+Clarity HQ has no analytics or usage-tracking SDK and no advertising SDK of any kind.
 
 **Crash reporting (optional, off by default):** Settings → Privacy has a **Send crash reports** toggle. Turning it
-on lets Clarity send a report via Sentry if the app hits an unexpected error. Before anything leaves your device,
+on lets Clarity HQ send a report via Sentry if the app hits an unexpected error. Before anything leaves your device,
 it's stripped down to a stack trace plus the app version and OS — never your account identity, your task/board
 content, or your recent activity (breadcrumbs) inside the app. Turning the toggle off stops reporting immediately,
 not just on your next launch.
 
 ## Who we share data with
 
-Clarity only talks to the services below — each one only when the related feature is on, and only with the data
+Clarity HQ only talks to the services below — each one only when the related feature is on, and only with the data
 that feature needs.
 
 | Recipient | What we send | Why |
@@ -61,20 +61,20 @@ that feature needs.
 | **Atlassian (Jira)** *(if you connect it)* | Your API token or OAuth token (for authentication, depending on how you connect), and a status-change request when you move a linked task | Two-way status sync with your Jira issues. |
 | **Google (Calendar)** *(if you connect it)* | Your OAuth token, and task titles for tasks/focus sessions you push to your calendar. See the note below on how the token itself is obtained. | Two-way sync between your tasks and your Google Calendar. |
 | **Slack** *(if you connect it)* | Your OAuth token; nothing is sent automatically — only used to fetch a message's text when you manually paste its permalink | Turns a Slack message you choose into a task. |
-| **GitHub** *(if you connect it)* | Your personal access token (read-only) | Looks up PR/branch status for Jira-linked cards. Clarity never writes to GitHub. |
-| **Google Drive** *(Lifetime accounts only, if you turn on Google Drive Sync)* | Your OAuth token, and your task/board content (the same data Cloud Sync would sync) — stored in an app-private area of your Drive that only Clarity can access, invisible in your regular Drive files. See the note below on how the token is obtained. | An alternative to Cloud Sync for Lifetime accounts: keeps your data current across devices through your own Google Drive storage instead of our infrastructure. |
+| **GitHub** *(if you connect it)* | Your personal access token (read-only) | Looks up PR/branch status for Jira-linked cards. Clarity HQ never writes to GitHub. |
+| **Google Drive** *(Lifetime accounts only, if you turn on Google Drive Sync)* | Your OAuth token, and your task/board content (the same data Cloud Sync would sync) — stored in an app-private area of your Drive that only Clarity HQ can access, invisible in your regular Drive files. See the note below on how the token is obtained. | An alternative to Cloud Sync for Lifetime accounts: keeps your data current across devices through your own Google Drive storage instead of our infrastructure. |
 | **Apple (iCloud)** *(Lifetime accounts only, macOS/iOS, if you turn on iCloud Sync)* | Your task/board content (the same data Cloud Sync would sync) | Same purpose as Google Drive above, through your iCloud account instead — handled entirely by macOS/iOS's built-in iCloud APIs. There's no OAuth token and no server of ours in this path at all: your content travels only between your own devices and Apple's iCloud servers. |
-| **Obsidian** *(if you use it)* | Nothing — Clarity only runs a query against Obsidian on your own machine, with no network request of any kind | Shows progress from a linked Obsidian Bases view. |
-| **A payment processor** *(not yet live)* | Not applicable yet — Clarity doesn't process payments directly today. When checkout ships, a named third-party payment processor will handle it, and this page will be updated before that happens. | Billing. |
+| **Obsidian** *(if you use it)* | Nothing — Clarity HQ only runs a query against Obsidian on your own machine, with no network request of any kind | Shows progress from a linked Obsidian Bases view. |
+| **A payment processor** *(not yet live)* | Not applicable yet — Clarity HQ doesn't process payments directly today. When checkout ships, a named third-party payment processor will handle it, and this page will be updated before that happens. | Billing. |
 
 None of the above sell your data or use it for advertising.
 
 ### A note on Google Calendar's OAuth exchange
 
-If you connect Google Calendar using Clarity's built-in connection (the default "Connect" button, with no
+If you connect Google Calendar using Clarity HQ's built-in connection (the default "Connect" button, with no
 setup required from you), the one-time step of turning your Google sign-in into an access token — and later
 refreshing it — is routed through a Supabase-hosted function (`oauth-token-exchange`) we operate. This exists so
-Clarity's own OAuth client secret never has to ship inside the app itself. That function only ever handles the
+Clarity HQ's own OAuth client secret never has to ship inside the app itself. That function only ever handles the
 token exchange: your actual calendar data (events, titles, sync traffic) still travels directly between your
 device and Google's API, never through Supabase. If you instead supply your own Google OAuth client (the
 "Use my own Google OAuth client" option), the token exchange happens directly between your device and Google,
@@ -84,9 +84,9 @@ with no Supabase involvement at all.
 
 Google Drive Sync uses a narrower Google OAuth scope than Google Calendar — `drive.appdata`, which only grants
 access to a hidden, app-private storage area, not your visible Drive files or folders. If you connect using
-Clarity's built-in connection (the default "Connect" button), the token exchange is routed through the same
+Clarity HQ's built-in connection (the default "Connect" button), the token exchange is routed through the same
 Supabase-hosted function (`oauth-token-exchange`) described above for Google Calendar, for the same reason: so
-Clarity's own OAuth client secret never has to ship inside the app. That function only ever handles the token
+Clarity HQ's own OAuth client secret never has to ship inside the app. That function only ever handles the token
 exchange — your actual task/board content still travels directly between your device and Google's API, never
 through Supabase. If you instead supply your own Google OAuth client, the token exchange happens directly between
 your device and Google, with no Supabase involvement at all.
@@ -94,9 +94,9 @@ your device and Google, with no Supabase involvement at all.
 ### A note on iCloud Sync
 
 Unlike every other integration on this page, iCloud Sync involves no OAuth and no server of ours whatsoever. It
-works entirely through Apple's built-in iCloud APIs: Clarity writes your task/board content to a private,
+works entirely through Apple's built-in iCloud APIs: Clarity HQ writes your task/board content to a private,
 app-scoped folder inside your iCloud account, and macOS/iOS's own iCloud sync keeps that folder current across
-your signed-in devices. Nothing passes through Clarity's or Supabase's infrastructure at any point — this data's
+your signed-in devices. Nothing passes through Clarity HQ's or Supabase's infrastructure at any point — this data's
 only destination beyond your own devices is Apple's iCloud service, under whatever agreement you already have with
 Apple for using iCloud.
 
@@ -104,7 +104,7 @@ Apple for using iCloud.
 
 If you connect Jira using the "Connect with Atlassian" button, the same kind of one-time exchange described above
 for Google Calendar applies: turning your Atlassian sign-in into an access token, and later refreshing it, is
-routed through the same Supabase-hosted function (`oauth-token-exchange`) so Clarity's own OAuth client secret
+routed through the same Supabase-hosted function (`oauth-token-exchange`) so Clarity HQ's own OAuth client secret
 never has to ship inside the app. That function only ever handles the token exchange — your actual Jira issue data
 still travels directly between your device and Atlassian's API, never through Supabase. If you instead connect Jira
 with your own API token (Settings → "Or connect with an API token"), there's no OAuth exchange at all and no
@@ -112,9 +112,9 @@ Supabase involvement in authenticating with Jira.
 
 ### A note on Slack's OAuth exchange
 
-Every Slack connection uses Clarity's own bundled OAuth app — there's no option to supply your own. Clicking
+Every Slack connection uses Clarity HQ's own bundled OAuth app — there's no option to supply your own. Clicking
 "Connect" turns your Slack sign-in into a user token via the same Supabase-hosted function
-(`oauth-token-exchange`) described above, for the same reason: so Clarity's own OAuth client secret never has to
+(`oauth-token-exchange`) described above, for the same reason: so Clarity HQ's own OAuth client secret never has to
 ship inside the app. Slack additionally requires every OAuth redirect to use HTTPS, so — unlike Google Calendar,
 Google Drive, and Jira, whose desktop connect flow redirects your browser straight back to the app — the one-time
 authorization code in Slack's redirect briefly passes through a small Supabase-hosted page
@@ -126,21 +126,21 @@ expire, so there's no ongoing refresh step.
 
 ### Google API Services User Data Policy & Limited Use
 
-Clarity's use and transfer to any other app of information received from Google APIs adheres to the
+Clarity HQ's use and transfer to any other app of information received from Google APIs adheres to the
 [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy),
 including the Limited Use requirements.
 
-Concretely: Clarity does not use any AI/ML model — its own or a third party's — in its handling of your Google
+Concretely: Clarity HQ does not use any AI/ML model — its own or a third party's — in its handling of your Google
 Calendar or Google Drive data. That data is never used to train, improve, or evaluate any AI/ML model, whether
 generalized or specialized, and it's never shared with or transmitted to any AI/ML service. See "Who we share data
-with" above for the complete, exhaustive list of who Clarity talks to, and "A note on Google Calendar's OAuth
+with" above for the complete, exhaustive list of who Clarity HQ talks to, and "A note on Google Calendar's OAuth
 exchange" / "A note on Google Drive's OAuth exchange" above for exactly how that data flows when you connect
 either one.
 
 ### A note on Jira and GitHub content
 
 If Jira is connected, an issue's summary, description, status, due date, and priority are copied into the matching
-Clarity task, and (like the rest of your task content) sync to Supabase if Cloud Sync is on. GitHub only ever
+Clarity HQ task, and (like the rest of your task content) sync to Supabase if Cloud Sync is on. GitHub only ever
 supplies a pull request's status/URL — never its title or contents.
 
 ### A note on Obsidian Bases
@@ -160,7 +160,7 @@ device's hardware-backed encrypted storage (Android Keystore).
 ## Data retention & deletion
 
 You can delete your account at any time from within the App: **Settings → Account → Delete account**. This
-immediately and permanently removes your account and all Supabase-synced data from our backend. Since Clarity is
+immediately and permanently removes your account and all Supabase-synced data from our backend. Since Clarity HQ is
 local-first, deleting your account doesn't remotely wipe the copy of your data already stored on your own
 device(s) — you're always in control of that locally.
 
@@ -184,7 +184,7 @@ Something these don't cover? Email us at the address below and we'll handle it d
 
 ## Children's privacy
 
-Clarity isn't directed at children, and we don't knowingly collect data from anyone under 13 (or the minimum age
+Clarity HQ isn't directed at children, and we don't knowingly collect data from anyone under 13 (or the minimum age
 required by your local law). If you believe a child has provided us data, contact us and we'll delete it.
 
 ## International data transfers

@@ -6,9 +6,9 @@ sidebar_position: 2
 
 ## First look
 
-Clarity opens on a **board** — a Kanban layout of lists (columns) holding task cards. Everything else is reached from the left sidebar or with a keyboard shortcut.
+Clarity HQ opens on a **board** — a Kanban layout of lists (columns) holding task cards. Everything else is reached from the left sidebar or with a keyboard shortcut.
 
-![A Clarity board with three lists — Backlog, Doing, and Review — holding task cards with priorities, tags, and due dates, and the sidebar on the left](/img/screenshots/board-view.png)
+![A Clarity HQ board with three lists — Backlog, Doing, and Review — holding task cards with priorities, tags, and due dates, and the sidebar on the left](/img/screenshots/board-view.png)
 
 ## The sidebar
 

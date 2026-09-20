@@ -1,6 +1,6 @@
 ---
 title: Terms & Conditions
-description: Clarity's terms and conditions.
+description: Clarity HQ's terms and conditions.
 ---
 
 # Terms & Conditions
@@ -11,12 +11,12 @@ _Last updated: August 24, 2026_
 > advice specific to your situation. It's provided here as a starting point and hasn't had a professional legal
 > review.
 
-These Terms & Conditions ("Terms") govern your use of Clarity (the "App"), operated by **Idan Ariav**, a sole
+These Terms & Conditions ("Terms") govern your use of Clarity HQ (the "App"), operated by **Idan Ariav**, a sole
 proprietor ("we", "us"). By creating an account or using the App, you agree to these Terms.
 
 ## The App
 
-Clarity is a desktop task-management application. Your task data is stored locally on your device and, if you
+Clarity HQ is a desktop task-management application. Your task data is stored locally on your device and, if you
 enable it, synced to our cloud infrastructure so it's available across your devices.
 
 ## License grant

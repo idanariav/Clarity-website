@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Packing
 
-Packing is a separate tool inside Clarity for building packing lists, tracking what you've packed for a trip, and knowing what's used up along the way. It isn't tied to tasks or boards — it has its own reusable templates, bags, and per-trip lists. Open it from the **Packing** entry in the sidebar.
+Packing is a separate tool inside Clarity HQ for building packing lists, tracking what you've packed for a trip, and knowing what's used up along the way. It isn't tied to tasks or boards — it has its own reusable templates, bags, and per-trip lists. Open it from the **Packing** entry in the sidebar.
 
 ## Templates
 

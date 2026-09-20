@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Integrations
 
-Clarity connects to Jira, GitHub, Google Calendar, Slack, and Obsidian, and exposes your tasks to AI assistants and scripts through a built-in command-line tool. Each integration can be switched off in **Settings → feature toggles** (Integrations group). Open each integration's manager from the **status indicator in the sidebar** or from Settings.
+Clarity HQ connects to Jira, GitHub, Google Calendar, Slack, and Obsidian, and exposes your tasks to AI assistants and scripts through a built-in command-line tool. Each integration can be switched off in **Settings → feature toggles** (Integrations group). Open each integration's manager from the **status indicator in the sidebar** or from Settings.
 
 ---
 
@@ -23,13 +23,13 @@ Two-way sync that pulls Jira issues into your boards as cards.
 - Pick a destination **board + list**. Matching issues appear there as cards with a **status pill** showing the Jira status.
 
 **Two-way sync**
-- Status changes flow both ways (Clarity ↔ Jira).
+- Status changes flow both ways (Clarity HQ ↔ Jira).
 - Auto-sync runs about every **10 minutes**; a **manual sync** button is available.
 
 **Unlinking**
-- If you drag a card out of its import's JQL results, it becomes **unlinked** — kept in Clarity but no longer synced.
+- If you drag a card out of its import's JQL results, it becomes **unlinked** — kept in Clarity HQ but no longer synced.
 
-**Use cases:** triage your Jira queue inside your personal board, mix Jira issues with non-Jira tasks, and update status without leaving Clarity.
+**Use cases:** triage your Jira queue inside your personal board, mix Jira issues with non-Jira tasks, and update status without leaving Clarity HQ.
 
 ---
 
@@ -47,7 +47,7 @@ Read-only branch/PR status shown on Jira-linked cards.
 **What it shows**
 - Applies only to cards already linked to a Jira issue (see [Jira](#jira) above) — GitHub matches the task's Jira key against branch names on open (and recently closed) pull requests across the org.
 - A status glyph appears on the card: **PR clean** (open, no unresolved review comments), **PR attention** (open, unresolved review comments), or **Merged/closed**.
-- Click the glyph to open the pull request on GitHub. Clarity never writes to GitHub.
+- Click the glyph to open the pull request on GitHub. Clarity HQ never writes to GitHub.
 - Refreshes automatically about every **10 minutes**; a **Refresh now** button in the GitHub manager triggers an immediate sync.
 
 **Use cases:** see at a glance which Jira-linked cards have a PR waiting on your review versus one that's already shipped.
@@ -82,7 +82,7 @@ Turn a Slack message into a task.
 
 **Importing**
 1. In Slack, copy a message's **permalink** (message ⋯ menu → *Copy link*).
-2. In Clarity, paste the permalink, choose a destination **board + list**, and a task is created from the message.
+2. In Clarity HQ, paste the permalink, choose a destination **board + list**, and a task is created from the message.
 
 **Use case:** capture "can you handle this?" Slack asks as real tasks without retyping them.
 
@@ -90,7 +90,7 @@ Turn a Slack message into a task.
 
 ## Obsidian Bases
 
-Bind a task to an Obsidian Bases view to see how much work is left, without leaving Clarity. Desktop only.
+Bind a task to an Obsidian Bases view to see how much work is left, without leaving Clarity HQ. Desktop only.
 
 **Setup**
 1. Open a task and find the **Obsidian Base** section, then **Link a base…**.
@@ -103,17 +103,17 @@ Bind a task to an Obsidian Bases view to see how much work is left, without leav
 **What it shows**
 - **Next up** — the first item in the view's results.
 - **Remaining** — how many items the view currently matches.
-- Read-only: Clarity queries the base via Obsidian's own CLI and never writes back.
+- Read-only: Clarity HQ queries the base via Obsidian's own CLI and never writes back.
 - Refreshes automatically about every **10 minutes**; a **Sync now** button in the task re-syncs immediately.
-- Desktop only: because syncing talks to a locally-running desktop Obsidian install, it doesn't run at all when you're using Clarity's mobile view.
+- Desktop only: because syncing talks to a locally-running desktop Obsidian install, it doesn't run at all when you're using Clarity HQ's mobile view.
 
-**Use cases:** track progress on an Obsidian-managed reading list, backlog, or project note straight from its linked Clarity task.
+**Use cases:** track progress on an Obsidian-managed reading list, backlog, or project note straight from its linked Clarity HQ task.
 
 ---
 
 ## AI assistant (CLI)
 
-Clarity ships a **command-line tool** so AI assistants (e.g. Claude Code) and scripts can read and manage your tasks using the same database the app uses. Changes it makes appear in the app automatically.
+Clarity HQ ships a **command-line tool** so AI assistants (e.g. Claude Code) and scripts can read and manage your tasks using the same database the app uses. Changes it makes appear in the app automatically.
 
 **Installing the CLI**
 1. Open **Settings → Advanced**, where the **Command-Line Tool** section walks through installation (macOS only; nothing is installed until you do this).
@@ -143,7 +143,7 @@ For technical details (command list, schemas, setup), see `cli/README.md` in the
 
 ## macOS Shortcuts
 
-Clarity registers the `clarity://` URL scheme on its Mac app, so the Shortcuts app (or Siri, or a keyboard shortcut, or a script) can create tasks without opening Clarity first.
+Clarity HQ registers the `clarity://` URL scheme on its Mac app, so the Shortcuts app (or Siri, or a keyboard shortcut, or a script) can create tasks without opening Clarity HQ first.
 
 **Simplest version — one line, full [Quick Add](boards-and-tasks#quick-add) syntax:**
 
@@ -152,8 +152,8 @@ Clarity registers the `clarity://` URL scheme on its Mac app, so the Shortcuts a
 3. Add **URL Encode** (search the actions library), fed by the previous step's output.
 4. Add **Text**, set to `clarity://quickadd?text=` followed by the encoded result from step 3.
 5. Add **Open URLs**, passing the composed text from step 4.
-6. Name the shortcut (e.g. "Quick Add to Clarity") and save.
+6. Name the shortcut (e.g. "Quick Add to Clarity HQ") and save.
 
-Run it from Spotlight, a keyboard shortcut (Shortcuts → shortcut details → add one), or say "Hey Siri, Quick Add to Clarity."
+Run it from Spotlight, a keyboard shortcut (Shortcuts → shortcut details → add one), or say "Hey Siri, Quick Add to Clarity HQ."
 
 **Structured version — separate fields instead of typed syntax:** build the URL the same way, but add more query params instead of (or alongside) `text`: `&project=<name>`, `&tags=<comma-separated names>`, `&board=<name>`, `&priority=<1-4>`, `&doDate=<YYYY-MM-DD>`, `&deadline=<YYYY-MM-DD>`, `&startDate=<YYYY-MM-DD>` — each URL-encoded the same way. These win over anything typed in `text`, so a shortcut can mix a free-text title with a **Choose from Menu** step for the project. Project/tag/board names that don't match an existing one are ignored rather than failing the task.

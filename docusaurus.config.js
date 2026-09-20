@@ -7,7 +7,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Clarity',
+  title: 'Clarity HQ',
   tagline: 'A desktop task manager for people who want more structure than a plain to-do list',
   favicon: 'img/favicon.ico',
 
@@ -51,9 +51,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        {name: 'description', content: 'Clarity is a desktop task manager built around Kanban boards, with saved views, a query language, automations, and two-way sync with Jira, Google Calendar, and Slack.'},
+        {name: 'description', content: 'Clarity HQ is a desktop task manager built around Kanban boards, with saved views, a query language, automations, and two-way sync with Jira, Google Calendar, and Slack.'},
         {name: 'author', content: 'Idan Ariav'},
-        {name: 'og:title', content: 'Clarity'},
+        {name: 'og:title', content: 'Clarity HQ'},
         {name: 'og:description', content: 'A desktop task manager for people who want more structure than a plain to-do list.'},
         {name: 'og:url', content: 'https://clarity.idanariav.com/'},
         {name: 'og:type', content: 'website'},
@@ -61,7 +61,7 @@ const config = {
       image: 'img/social-card.png',
       navbar: {
         logo: {
-          alt: 'Clarity',
+          alt: 'Clarity HQ',
           src: 'img/clarity-wordmark.svg',
           srcDark: 'img/clarity-wordmark-dark.svg',
           width: 132,
@@ -102,7 +102,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Idan Ariav. Clarity.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Idan Ariav. Clarity HQ.`,
       },
       prism: {
         theme: prismThemes.github,
