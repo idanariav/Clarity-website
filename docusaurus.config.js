@@ -97,6 +97,7 @@ const config = {
           {
             title: 'Support',
             items: [
+              {label: 'Support', to: '/support'},
               {label: 'idan@idanariav.com', href: 'mailto:idan@idanariav.com'},
             ],
           },
