@@ -76,6 +76,7 @@ export default function Pricing() {
               <strong>for as long as they stay subscribed or after buying lifetime</strong> — even after the price
               goes up once the product is out of beta. All plans include a 30-day free trial.
             </p>
+            <p>One plan covers all your devices. Subscribe or buy on the desktop app or the web.</p>
           </div>
         </div>
         <div className="row">
