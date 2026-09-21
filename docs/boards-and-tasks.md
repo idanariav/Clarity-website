@@ -28,6 +28,8 @@ Lists are the columns within a board (e.g. *To Do / Doing / Done*).
 
 A card is a task. Create one by typing in a list's quick-add box, or with the Quick Add popup (**a**). Click a card to open the full editor; drag it to move between lists or reorder; right-click it for quick actions (date, priority, project, milestone, tags, fields) without opening the editor.
 
+Each card keeps to one quiet line of details under its title: the due date first (shown as *Today*, *2d overdue*, …), then the Jira key, tags, checklist progress, custom fields, project and milestone — up to three, with a **+N** for the rest (hover it to see what's hidden). Priority is shown by the color of the check-circle. Hover a card and click **+** to add or change a date, priority, project, tags or fields without opening it.
+
 ### Quick Add
 
 Press **a** for the Quick Add popup, or type in any list's quick-add box. As you type the **title**, Clarity HQ recognizes shorthand **tokens** and lifts them out of the title:
@@ -52,7 +54,7 @@ Notes on matching:
 
 ### The task editor
 
-Click a card to open the detail editor. Fields available:
+Click a card to open the detail editor. Fields available (less common ones, like **Start date** and **Flexible**, appear as rows once you add them with **+ Add field**):
 
 ![The task detail editor open for a task, showing notes, checklist, priority buttons, gem reward, and project fields](/img/screenshots/task-editor.png)
 

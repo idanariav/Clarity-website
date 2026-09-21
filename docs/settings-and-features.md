@@ -63,9 +63,8 @@ See [Integrations](integrations) for setup.
 
 - **Theme** — choose a preset: **Default**, **Dracula**, **Nord**, **Tokyo Night**, **Solarized Light**, or **Gruvbox**. Some are light, some dark.
 - **Light/Dark + Accent** — when using the **Default** theme you also get a light/dark toggle and an **accent color**: Blue, Purple, Green, Teal, Orange, or Pink.
-- **Card layout** — **Full** (all card metadata visible) or **Compact** (quieter cards), with per-attribute toggles for what compact cards show (tags, Jira key, milestone, custom fields, checklist progress).
 
-![The Settings Appearance section, showing the Theme dropdown, accent color swatches, and Card Layout toggles for tags, Jira key, milestone, and checklist](/img/screenshots/settings-appearance.png)
+![The Settings Appearance section, showing the Theme dropdown, accent color swatches, and the Color names toggle](/img/screenshots/settings-appearance.png)
 
 ## Keyboard shortcuts
 
@@ -152,7 +151,7 @@ Each below lists *what it does · how to use it · when it shows up · a use cas
 ### Day Planner
 
 - **What:** a time-blocking view for a single day.
-- **How:** open **Planner**. The left pane lists tasks that need scheduling; the right pane is a 24-hour timeline showing your Google Calendar events (if synced) and **focus sessions**. Drag a task onto the timeline to schedule a session; drag to a trash zone to remove it; use the arrows to change day.
+- **How:** open **Planner**. The right-hand pane lists tasks that need scheduling; the main area is a 24-hour timeline showing your Google Calendar events (if synced) and **focus sessions**. Drag a task onto the timeline to schedule a session; drag to a trash zone to remove it; use the arrows to change day.
 
 ![The Day Planner with an hourly timeline showing calendar events and gaps to schedule, and a right-hand panel listing overdue and unscheduled tasks](/img/screenshots/day-planner.png)
 - **When:** it's its own view, opened from the sidebar.

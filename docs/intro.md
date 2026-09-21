@@ -47,6 +47,6 @@ This guide explains what each feature does, how to use it, when it shows up, and
 - Packing templates, bags, trip lists → [Packing](packing)
 
 **Make it yours**
-- Themes, accent colors, card layout, keyboard shortcuts → [Settings & features](settings-and-features)
+- Themes, accent colors, keyboard shortcuts → [Settings & features](settings-and-features)
 
 > Most non-core features can be switched off in **Settings → feature toggles** to declutter the UI. Turning a feature off hides it but keeps your data, so you can turn it back on anytime. See [Settings & features](settings-and-features#feature-toggles).
