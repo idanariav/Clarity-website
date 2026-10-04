@@ -28,7 +28,7 @@ We'll keep you updated as we work on a fix, and — if you'd like — credit you
 
 **In scope:**
 
-- The Clarity HQ desktop app (Windows/macOS/Linux builds) and its Android app.
+- The Clarity HQ desktop app (Windows and macOS builds) and its Android app.
 - This website (`clarity.idanariav.com`).
 - Our backend (Supabase project) to the extent it's reachable from the app or website.
 

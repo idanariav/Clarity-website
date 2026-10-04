@@ -6,17 +6,25 @@ import {Download, Laptop, MonitorSmartphone, Smartphone, Globe} from 'lucide-rea
 import styles from './download.module.css';
 
 const RELEASES_URL = 'https://github.com/idanariav/Clarity-releases/releases/latest';
+// The ms-windows-store:// protocol only resolves on Windows; other browsers get the web listing.
+const WINDOWS_STORE_APP_URL = 'ms-windows-store://pdp/?productid=9PPQ6WFRH86F';
+const WINDOWS_STORE_WEB_URL = 'https://apps.microsoft.com/detail/9PPQ6WFRH86F';
 const LATEST_RELEASE_API = 'https://api.github.com/repos/idanariav/Clarity-releases/releases/latest';
 
 const COMING_SOON = [
-  {icon: MonitorSmartphone, name: 'Linux'},
   {icon: Smartphone, name: 'Android & iOS'},
   {icon: Globe, name: 'Web'},
 ];
 
 export default function DownloadPage() {
   const [macDownloadUrl, setMacDownloadUrl] = useState(RELEASES_URL);
-  const [winDownloadUrl, setWinDownloadUrl] = useState(RELEASES_URL);
+  const [winStoreUrl, setWinStoreUrl] = useState(WINDOWS_STORE_WEB_URL);
+
+  useEffect(() => {
+    if (/Windows/i.test(navigator.userAgent)) {
+      setWinStoreUrl(WINDOWS_STORE_APP_URL);
+    }
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -27,13 +35,6 @@ export default function DownloadPage() {
         const dmgAsset = release?.assets?.find((asset) => asset.name.endsWith('aarch64.dmg'));
         if (dmgAsset) {
           setMacDownloadUrl(dmgAsset.browser_download_url);
-        }
-        // NSIS installer, e.g. Clarity_0.2.46_x64-setup.exe -- the primary
-        // Windows download (smaller/friendlier than the MSI, which is aimed
-        // at IT/GPO-managed installs rather than a direct download link).
-        const exeAsset = release?.assets?.find((asset) => asset.name.endsWith('-setup.exe'));
-        if (exeAsset) {
-          setWinDownloadUrl(exeAsset.browser_download_url);
         }
       })
       .catch(() => {});
@@ -51,7 +52,7 @@ export default function DownloadPage() {
             <Heading as="h1">Download Clarity HQ</Heading>
             <p>
               Clarity HQ is available today for <strong>macOS on Apple Silicon</strong> (M-series chips) and{' '}
-              <strong>Windows</strong>. macOS builds are signed, notarized, and auto-update in place.
+              <strong>Windows</strong>. macOS builds are signed, notarized, and auto-update in place; Windows installs from the Microsoft Store.
             </p>
           </div>
         </div>
@@ -78,13 +79,11 @@ export default function DownloadPage() {
               </div>
               <Heading as="h3">Windows</Heading>
               <p className={styles.cardNote}>Requires Windows 10 or later (64-bit).</p>
-              <Link className="button button--primary button--lg" to={winDownloadUrl}>
-                Download for Windows
+              <Link className="button button--primary button--lg" to={winStoreUrl}>
+                Get it from Microsoft Store
               </Link>
               <p className={styles.cardSub}>
-                Downloads the latest installer <code>.exe</code> directly from GitHub. Not code-signed yet, so
-                Windows SmartScreen may show an "unknown publisher" warning — choose{' '}
-                <strong>More info → Run anyway</strong> to continue.
+                Installs from the Microsoft Store, which keeps the app up to date automatically.
               </p>
             </div>
           </div>
