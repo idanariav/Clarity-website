@@ -5,6 +5,8 @@ Landing page, docs, pricing, and legal pages for [Clarity](https://github.com/id
 
 ## Local development
 
+Requires Node.js >= 20 (see `package.json` engines).
+
 ```bash
 npm install
 npm start
